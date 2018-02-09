@@ -62,8 +62,7 @@ public class VirtualPetShelterApp {
 			String optionEntered = input.nextLine();
 			if (optionEntered.equals("1")) { // OPTION 1
 				dogs.feedAll();
-
-				// cats.feedAll();
+				cats.feedAll();
 				System.out.println("You fed all the pets in the Shelter food.\n");
 
 			} else if (optionEntered.equals("2")) { // OPTION 2
