@@ -22,6 +22,7 @@ public class VirtualPetShelter {
 	public void intake(VirtualPet virtualPet) {
 		String newName = virtualPet.getName();
 		shelterPetDogs.put(newName, virtualPet);
+		// shelterPetCats.put(newName, virtualPet);
 	}
 
 	public VirtualPet findPet(String petName) {
