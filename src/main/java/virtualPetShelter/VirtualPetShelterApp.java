@@ -73,16 +73,17 @@ public class VirtualPetShelterApp {
 				cats.waterAll();
 				System.out.println("You gave all the Dog's & Cat's in the Shelter water.\n");
 
-			} else if (optionEntered.equals("3")) { // OPTION 3
+			} else if (optionEntered.equals("4")) { // OPTION 4
 				System.out.println("Choose the pet you would like to play with:");
-				System.out.println("\nWhich dog would you like to play with today?");
+				System.out.println("\nWhich Shelter Pet would you like to play with today?");
 				System.out.println(dogs.option4Display());
+				System.out.println(cats.option4Display());
 				String petName = input.nextLine();
 
 				dogs.play(petName);
 				System.out.println("You took " + petName + " for a walk to the field to play.\n");
 
-			} else if (optionEntered.equals("4")) { // OPTION 4
+			} else if (optionEntered.equals("5")) { // OPTION 5
 				System.out.println("You've chosen to adopt a pet.");
 				System.out.println("Which pet would you like to adopt?\n");
 				System.out.println(dogs.option4Display());
@@ -95,7 +96,7 @@ public class VirtualPetShelterApp {
 					System.out.println("Congrats on adopting your new pet \n" + petName + "!");
 				}
 
-			} else if (optionEntered.equals("5")) { // OPTION 5
+			} else if (optionEntered.equals("6")) { // OPTION 6
 				System.out.println("Enter the name of the pet being surrendered: ");
 				String newPetName = input.nextLine();
 
@@ -106,7 +107,7 @@ public class VirtualPetShelterApp {
 				System.out.println("Your pet will sure miss you.");
 				System.out.println("Thanks admitting your pet instead of discarding your pet elsewhere...\n");
 
-			} else if (optionEntered.equals("6")) { // OPTION 6
+			} else if (optionEntered.equals("9")) { // OPTION 9
 				System.out.println("Are you sure you wish to quit the game?");
 				System.out.println("Enter Yes or No");
 				decision = input.nextLine();
@@ -122,6 +123,7 @@ public class VirtualPetShelterApp {
 
 			}
 			dogs.tickDogs();
+			cats.tickCats();
 		} // end while loop
 
 		input.close();

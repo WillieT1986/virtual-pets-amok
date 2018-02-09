@@ -81,7 +81,12 @@ public class VirtualPetShelter {
 		for (VirtualPet pet : shelterPetDogs.values()) {
 			pet.tick();
 		}
+	}
 
+	public void tickCats() {
+		for (VirtualPet pet : shelterPetDogs.values()) {
+			pet.tick();
+		}
 	}
 
 }
