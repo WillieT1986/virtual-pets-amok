@@ -40,4 +40,23 @@ public class VirtualPet {
 		return boredom;
 	}
 
+	public void feedPet() {
+		this.hunger += 5;
+		this.water -= 5;
+	}
+
+	public void waterPet() {
+		this.water += 5;
+	}
+
+	public void playPet() {
+		this.boredom += 5;
+	}
+
+	public void tick() {
+		this.hunger--;
+		this.water--;
+		this.boredom--;
+	}
+
 }
