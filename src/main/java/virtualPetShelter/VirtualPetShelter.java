@@ -52,7 +52,6 @@ public class VirtualPetShelter {
 
 	public void play(String name) {
 		shelterPetDogs.get(name).playPet();
-
 	}
 
 	public void add(VirtualPet pet) {
@@ -68,13 +67,13 @@ public class VirtualPetShelter {
 		return petStatus;
 	}
 
-	public String option4Display() {
-		String option4Display = "";
+	public String option5Display() {
+		String option5Display = "";
 		for (Entry<String, VirtualPet> eachPet : shelterPetDogs.entrySet()) {
-			option4Display += "Name: " + eachPet.getValue().getName() + "\t" + eachPet.getValue().getDescription()
+			option5Display += "Name: " + eachPet.getValue().getName() + "\t" + eachPet.getValue().getDescription()
 					+ "\n";
 		}
-		return option4Display;
+		return option5Display;
 	}
 
 	public void tickDogs() {
