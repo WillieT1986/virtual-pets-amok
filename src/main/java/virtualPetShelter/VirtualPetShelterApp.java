@@ -94,17 +94,37 @@ public class VirtualPetShelterApp {
 				System.out.println(cats.option5Display());
 				String petName = input.nextLine();
 
+				// Dog Adoption
 				if (!dogs.doesPetRemain(petName)) {
-					System.out.println("This pet does not exist.");
+					System.out.println("This Dog does not exist.");
 				} else {
 					dogs.adopt(petName);
-					System.out.println("Congrats on adopting your new pet \n" + petName + "!");
+					System.out.println("Congrats on adopting your new Dog \n" + petName + "!");
 				}
+
+				// Cat Adoption
+				if (!cats.doesPetRemain(petName)) {
+					System.out.println("This Cat does not exit.");
+				} else {
+					cats.adopt(petName);
+					System.out.println(
+							"Congrats on adopting your new spawn of Satan, the Shelter means Cat \n" + petName + "!");
+				}
+
+				// RoboPet Adoption
+				// if (!robos.doesPetRemain(petName)) {
+				// System.out.println("This Dog does not exist.");
+				// } else {
+				// robos.adopt(petName);
+				// System.out.println("Congrats on adopting your new RoboPet \n" + petName +
+				// "!");
+				// }
 
 			} else if (optionEntered.equals("6")) { // OPTION 6
 				System.out.println("What type of pet are your surrendering?");
 				System.out.println("Dog? Cat? RoboPet?");
 				String petDecision = input.nextLine();
+
 				if (petDecision.equalsIgnoreCase("Dog")) { // DOG Choice
 					System.out.println("Enter the name of the Dog being surrendered: ");
 					String newPetName = input.nextLine();
@@ -126,7 +146,6 @@ public class VirtualPetShelterApp {
 					cats.add(new VirtualPet(newPetName, newPetDescription));
 					System.out.println("Your Cat will sure miss you.");
 					System.out.println("Thanks admitting your pet instead of discarding your Cat elsewhere...\n");
-
 				}
 				// else if (petDecision.equalsIgnoreCase("RoboPet")) { //ROBOPET Choice
 				// System.out.println("Enter the name of the RoboPet that you are
