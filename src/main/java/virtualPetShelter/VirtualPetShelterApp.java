@@ -96,7 +96,7 @@ public class VirtualPetShelterApp {
 				}
 
 			}
-			pets.tickAll();
+			pets.tickDogs();
 		} // end while loop
 
 		input.close();
