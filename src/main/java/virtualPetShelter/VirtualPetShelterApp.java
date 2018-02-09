@@ -55,12 +55,12 @@ public class VirtualPetShelterApp {
 			System.out.println("1. Feed Organic Pets.");
 			System.out.println("2. Water Organic pets.");
 			System.out.println("3. Oil RoboPets.  *Not yet implimented* -no functionality");
-			System.out.println("4. Play with pet.  *Not yet implimented* -no functionality");
-			System.out.println("5. Adopt a pet. *Not yet implimented* -no functionality");
-			System.out.println("6. Admit a pet. *Not yet implimented* -no functionality");
+			System.out.println("4. Play with pet.");
+			System.out.println("5. Adopt a pet.");
+			System.out.println("6. Admit a pet.");
 			System.out.println("7. Clean all Dog cages. *Not yet implimented* -no functionality");
 			System.out.println("8. Clean the Shelter Litter. *Not yet implimented* -no functionality");
-			System.out.println("9. Quit *Not yet implimented* -no functionality");
+			System.out.println("9. Quit");
 
 			String optionEntered = input.nextLine();
 			if (optionEntered.equals("1")) { // OPTION 1
@@ -116,7 +116,7 @@ public class VirtualPetShelterApp {
 					System.out.println("Your Dog will sure miss you.");
 					System.out.println("Thanks admitting your Dog instead of discarding your Dog elsewhere...\n");
 
-				} else if (petDecision.equalsIgnoreCase("Cat")) {
+				} else if (petDecision.equalsIgnoreCase("Cat")) { // CAT Choice
 					System.out.println("Enter the name of the Cat being surrendered: ");
 					String newPetName = input.nextLine();
 
@@ -128,7 +128,7 @@ public class VirtualPetShelterApp {
 					System.out.println("Thanks admitting your pet instead of discarding your Cat elsewhere...\n");
 
 				}
-				// else if (petDecision.equalsIgnoreCase("RoboPet")) {
+				// else if (petDecision.equalsIgnoreCase("RoboPet")) { //ROBOPET Choice
 				// System.out.println("Enter the name of the RoboPet that you are
 				// surrendering.");
 				// String newPetName = input.nextLine();
