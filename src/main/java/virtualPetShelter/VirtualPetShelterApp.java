@@ -63,11 +63,12 @@ public class VirtualPetShelterApp {
 			if (optionEntered.equals("1")) { // OPTION 1
 				dogs.feedAll();
 				cats.feedAll();
-				System.out.println("You fed all the pets in the Shelter food.\n");
+				System.out.println("You fed all the Dog's & Cat's in the Shelter food.\n");
 
 			} else if (optionEntered.equals("2")) { // OPTION 2
 				dogs.waterAll();
-				System.out.println("You gave all the pets in the Shelter water.\n");
+				cats.waterAll();
+				System.out.println("You gave all the Dog's & Cat's in the Shelter water.\n");
 
 			} else if (optionEntered.equals("3")) { // OPTION 3
 				System.out.println("Choose the pet you would like to play with:");
