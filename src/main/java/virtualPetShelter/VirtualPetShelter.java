@@ -7,55 +7,55 @@ import java.util.Map.Entry;
 
 public class VirtualPetShelter {
 
-	public Map<String, VirtualPet> shelterPetDog = new HashMap<>();
+	public Map<String, VirtualPet> shelterPetDogs = new HashMap<>();
 
 	public Collection<VirtualPet> pets() {
-		return shelterPetDog.values();
+		return shelterPetDogs.values();
 	}
 
 	// Return specific Virtual Pet given its name
 	public void intake(VirtualPet virtualPet) {
 		String newName = virtualPet.getName();
-		shelterPetDog.put(newName, virtualPet);
+		shelterPetDogs.put(newName, virtualPet);
 	}
 
 	public VirtualPet findPet(String petName) {
-		return shelterPetDog.get(petName);
+		return shelterPetDogs.get(petName);
 	}
 
 	public boolean adopt(String name) {
-		shelterPetDog.remove(name);
+		shelterPetDogs.remove(name);
 		return false;
 	}
 
 	public boolean doesPetRemain(String name) {
-		return shelterPetDog.containsKey(name);
+		return shelterPetDogs.containsKey(name);
 	}
 
 	public void feedAll() {
-		for (VirtualPet pet : shelterPetDog.values()) {
+		for (VirtualPet pet : shelterPetDogs.values()) {
 			pet.feedPet();
 		}
 	}
 
 	public void waterAll() {
-		for (VirtualPet pet : shelterPetDog.values()) {
+		for (VirtualPet pet : shelterPetDogs.values()) {
 			pet.waterPet();
 		}
 	}
 
 	public void play(String name) {
-		shelterPetDog.get(name).playPet();
+		shelterPetDogs.get(name).playPet();
 
 	}
 
 	public void add(VirtualPet pet) {
-		shelterPetDog.put(pet.getName(), pet);
+		shelterPetDogs.put(pet.getName(), pet);
 	}
 
 	public String petStatus() {
 		String petStatus = "";
-		for (Entry<String, VirtualPet> eachPet : shelterPetDog.entrySet()) {
+		for (Entry<String, VirtualPet> eachPet : shelterPetDogs.entrySet()) {
 			petStatus += eachPet.getValue().getName() + "\t   " + eachPet.getValue().getHunger() + "\t   "
 					+ eachPet.getValue().getWater() + "\t   " + eachPet.getValue().getBoredom() + "\n";
 		}
@@ -64,7 +64,7 @@ public class VirtualPetShelter {
 
 	public String option4Display() {
 		String option4Display = "";
-		for (Entry<String, VirtualPet> eachPet : shelterPetDog.entrySet()) {
+		for (Entry<String, VirtualPet> eachPet : shelterPetDogs.entrySet()) {
 			option4Display += "Name: " + eachPet.getValue().getName() + "\t" + eachPet.getValue().getDescription()
 					+ "\n";
 		}
@@ -72,7 +72,7 @@ public class VirtualPetShelter {
 	}
 
 	public void tickDogs() {
-		for (VirtualPet pet : shelterPetDog.values()) {
+		for (VirtualPet pet : shelterPetDogs.values()) {
 			pet.tick();
 		}
 
