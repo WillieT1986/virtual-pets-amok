@@ -27,9 +27,31 @@ public class VirtualPetTest {
 		assertEquals("description", check);
 	}
 
-	// @Test
-	// public void should() {
-	//
-	// }
+	@Test
+	public void shouldReturnVirtualPetNameDescriptionHungerWaterAndBoredom() {
+		VirtualPet underTest = new VirtualPet("name", "description", 0, 0, 0);
+		assertNotNull(underTest);
+	}
+
+	@Test
+	public void ShouldReturnVirtualPetHunger() {
+		VirtualPet underTest = new VirtualPet("name", "description", 1, 0, 0);
+		int check = underTest.getHunger();
+		assertEquals(1, check);
+	}
+
+	@Test
+	public void shouldReturnVirtualPetWater() {
+		VirtualPet underTest = new VirtualPet("name", "description", 0, 1, 0);
+		int check = underTest.getWater();
+		assertEquals(1, check);
+	}
+
+	@Test
+	public void shouldReturnVirtualPetBoredom() {
+		VirtualPet underTest = new VirtualPet("name", "description", 0, 0, 1);
+		int check = underTest.getBoredom();
+		assertEquals(1, check);
+	}
 
 }
