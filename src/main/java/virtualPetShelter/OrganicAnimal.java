@@ -1,6 +1,7 @@
 package virtualPetShelter;
 
-public class OrganicAnimal {
+public abstract class OrganicAnimal {
+
 	private int hunger;
 	private int water;
 	private int boredom;
