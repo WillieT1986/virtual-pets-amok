@@ -52,12 +52,15 @@ public class VirtualPetShelterApp {
 			System.out.println(cats.petStatus());
 			System.out.println("\nWhat would you like to do next?\n");
 
-			System.out.println("1. Feed Organic Pets");
-			System.out.println("2. Water Organic pets");
-			System.out.println("3. Play with a pet");
-			System.out.println("4. Adopt a pet.");
-			System.out.println("5. Admit a pet.");
-			System.out.println("6. Quit");
+			System.out.println("1. Feed Organic Pets.");
+			System.out.println("2. Water Organic pets.");
+			System.out.println("3. Oil RoboPets.  *Not yet implimented* -no functionality");
+			System.out.println("4. Play with pet.  *Not yet implimented* -no functionality");
+			System.out.println("5. Adopt a pet. *Not yet implimented* -no functionality");
+			System.out.println("6. Admit a pet. *Not yet implimented* -no functionality");
+			System.out.println("7. Clean all Dog cages. *Not yet implimented* -no functionality");
+			System.out.println("8. Clean the Shelter Litter. *Not yet implimented* -no functionality");
+			System.out.println("9. Quit *Not yet implimented* -no functionality");
 
 			String optionEntered = input.nextLine();
 			if (optionEntered.equals("1")) { // OPTION 1
