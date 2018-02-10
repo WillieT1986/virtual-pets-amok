@@ -63,6 +63,8 @@ public class VirtualPet {
 		this.hunger--;
 		this.water--;
 		this.boredom--;
+		this.waste++;
+
 	}
 
 }
