@@ -25,12 +25,12 @@ public class RobotDogTest {
 		assertEquals(check, 40);
 	}
 
-	// @Test
-	// public void shouldReturnRobotDogWater() {
-	// int check = underTest.getWater();
-	// assertEquals(check, 30);
-	// }
-	//
+	@Test
+	public void shouldReturnRobotDogBatteryLevel() {
+		int check = underTest.getBatteryLevel();
+		assertEquals(check, 30);
+	}
+
 	// @Test
 	// public void shouldReturnRobotDogBoredom() {
 	// int check = underTest.getBoredom();
