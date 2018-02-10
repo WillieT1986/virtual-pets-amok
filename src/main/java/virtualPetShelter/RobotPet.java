@@ -12,10 +12,15 @@ public class RobotPet extends VirtualPet {
 	public RobotPet(String name, String description, int oil, int batteryLevel, int happiness) {
 		super(name, description);
 		this.oil = oil;
+		this.batteryLevel = batteryLevel;
 	}
 
 	public int getOil() {
 		return oil;
+	}
+
+	public int getBatteryLevel() {
+		return batteryLevel;
 	}
 
 }
