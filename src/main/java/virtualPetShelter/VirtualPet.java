@@ -50,7 +50,7 @@ public class VirtualPet {
 	}
 
 	public void playPet() {
-		this.boredom += 5;
+		this.boredom += 6;
 	}
 
 	public void tick() {

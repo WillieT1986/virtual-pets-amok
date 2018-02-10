@@ -59,7 +59,7 @@ public class VirtualPetShelterApp {
 			System.out.println("5. Adopt a pet.");
 			System.out.println("6. Admit a pet.");
 			System.out.println("7. Clean all Dog cages. *Not yet implimented* -no functionality");
-			System.out.println("8. Clean the Shelter Litter. *Not yet implimented* -no functionality");
+			System.out.println("8. Clean the Shelter Litter Box. *Not yet implimented* -no functionality");
 			System.out.println("9. Quit");
 
 			String optionEntered = input.nextLine();
@@ -74,18 +74,23 @@ public class VirtualPetShelterApp {
 				System.out.println("You gave all the Dog's & Cat's in the Shelter water.\n");
 
 			} else if (optionEntered.equals("4")) { // OPTION 4
-				System.out.println("Choose the pet you would like to play with:");
 				System.out.println("\nWhich Shelter Pet would you like to play with today?");
-				System.out.println(dogs.option5Display());
-				System.out.println(cats.option5Display());
-				String petName = input.nextLine();
+				System.out.println("Dogs? Cats? RoboPets?\n");
+				String newDecision = input.nextLine();
 
-				dogs.play(petName);
-				System.out.println("You took " + petName + " for a walk to the field to play.\n");
+				if (newDecision.equalsIgnoreCase("Dogs")) {
+					System.out.println(dogs.option5Display());
+					String petName = input.nextLine();
+					dogs.play(petName);
+					System.out.println("You took " + petName + " for a walk to the field to play.\n");
 
-				cats.play(petName);
-				System.out.println(
-						"You took" + petName + " for a walk. Said cat was lazy and rode on your shoulder instead.");
+				} else if (newDecision.equalsIgnoreCase("Cats")) {
+					System.out.println(cats.option5Display());
+					String petName = input.nextLine();
+					cats.play(petName);
+					System.out.println(
+							"You took" + petName + " for a walk. Said cat was lazy and rode on your shoulder instead.");
+				}
 
 			} else if (optionEntered.equals("5")) { // OPTION 5
 				System.out.println("You've chosen to adopt a pet.");
