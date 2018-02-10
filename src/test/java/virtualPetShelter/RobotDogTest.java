@@ -5,18 +5,18 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class RobotDogTest {
-	RobotPet underTest = new RobotDog("Jax", "description", 40, 50, 60);
+	RobotPet underTest = new RobotDog("Jax", "Is a Robot Dog", 40, 50, 60);
 
 	@Test
-	public void shouldReturnDogName() {
+	public void shouldReturnRobotDogName() {
 		String check = underTest.getName();
-		assertEquals(check, "Hold");
+		assertEquals(check, "Jax");
 	}
 
 	// @Test
 	// public void shouldReturnDogDescription() {
 	// String check = underTest.getDescription();
-	// assertEquals(check, "Is a dog");
+	// assertEquals(check, "Is a Robot Dog");
 	// }
 	//
 	// @Test
