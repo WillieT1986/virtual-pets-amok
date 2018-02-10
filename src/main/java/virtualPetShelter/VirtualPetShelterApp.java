@@ -8,22 +8,23 @@ public class VirtualPetShelterApp {
 		Scanner input = new Scanner(System.in);
 
 		VirtualPetShelter dogs = new VirtualPetShelter();
+		VirtualPetShelter cats = new VirtualPetShelter();
+
 		VirtualPet dog1 = new VirtualPet("Hold", "Aged and fragile.", 40, 50, 60, 40, 60);
 		VirtualPet dog2 = new VirtualPet("Akita", "Wolf Hybrid, friendly,protective...", 50, 40, 50, 50, 50);
 		VirtualPet dog3 = new VirtualPet("Blue", "Family oriented and kid friendly.", 60, 60, 60, 60, 80);
 		VirtualPet dog4 = new VirtualPet("Ringo", "Dog of the Vikings. Studier than a Wolf, yet gentle.", 70, 80, 80,
 				60, 50);
 
-		dogs.add(dog1);
-		dogs.add(dog2);
-		dogs.add(dog3);
-		dogs.add(dog4);
-
-		VirtualPetShelter cats = new VirtualPetShelter();
 		VirtualPet cat1 = new VirtualPet("Tara", "Young and Restless.", 50, 40, 50, 70, 40);
 		VirtualPet cat2 = new VirtualPet("Kitty", "Kitten found in a box under a porch.", 50, 40, 50, 70, 30);
 		VirtualPet cat3 = new VirtualPet("Snowbal", "Kitten found in a box under a porch.", 50, 40, 50, 60, 70);
 		VirtualPet cat4 = new VirtualPet("Yoohoo", "Skiddish and ungrateful.", 50, 40, 50, 80, 40);
+
+		dogs.add(dog1);
+		dogs.add(dog2);
+		dogs.add(dog3);
+		dogs.add(dog4);
 
 		cats.add(cat1);
 		cats.add(cat2);
@@ -63,11 +64,11 @@ public class VirtualPetShelterApp {
 			System.out.println(cats.petStatus());
 			System.out.println();
 
-			System.out.println("\t\t    **ROBO DOGS**\n");
-			System.out.println("Name\t|Hunger\t|Oil\t   |Battery |Happiness");// the \t allows console to align
-																				// output in columns
-			System.out.println("--------|-------|-------|--------|---------");
-			System.out.println(robos.petStatusRobo());
+			System.out.println("\t\t **ROBO DOGS**\n");
+			System.out.println("Name\t|Oil\t|Battery |Happiness");// the \t allows console to align
+																	// output in columns
+			System.out.println("--------|-------|--------|---------");
+			System.out.println(robos.petStatus());
 			System.out.println("\nWhat would you like to do next?\n");
 
 			System.out.println("1. Feed Organic Pets.");

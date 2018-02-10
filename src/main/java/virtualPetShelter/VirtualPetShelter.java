@@ -64,30 +64,21 @@ public class VirtualPetShelter {
 	}
 
 	public String petStatus() {
-		String petStatusDog = "";
+		String petStatus = "";
 		for (Entry<String, VirtualPet> eachDog : shelterPetDogs.entrySet()) {
-			petStatusDog += eachDog.getValue().getName() + "\t " + eachDog.getValue().getHunger() + "\t "
+			petStatus += eachDog.getValue().getName() + "\t " + eachDog.getValue().getHunger() + "\t "
 					+ eachDog.getValue().getWater() + "\t " + eachDog.getValue().getBoredom() + "\t "
 					+ eachDog.getValue().getWaste() + "\t " + eachDog.getValue().getHappiness() + "\n";
 
-			String petStatusCat = "";
-			for (Entry<String, VirtualPet> eachCat : shelterPetCats.entrySet()) {
-				petStatusCat += eachCat.getValue().getName() + "\t " + eachCat.getValue().getHunger() + "\t "
-						+ eachCat.getValue().getWater() + "\t " + eachCat.getValue().getBoredom() + "\t "
-						+ eachCat.getValue().getWaste() + "\t " + eachCat.getValue().getHappiness() + "\n";
+			String roboStatus = "";
+			for (Entry<String, VirtualPet> eachRobo : shelterPetRobo.entrySet()) {
+				roboStatus += eachRobo.getValue().getName() + "\t" + eachRobo.getValue().getDescription() + "\t"
+						+ eachRobo.getValue().getOil() + "\t" + eachRobo.getValue().getBatteryLife() + "\t"
+						+ eachRobo.getValue().getHappiness() + "\n";
 			}
-			return petStatusCat;
+			return petStatus;
 		}
-		return petStatusDog;
-	}
-
-	public String petStatusRobo() {
-		String petStatusRobo = "";
-		for (Entry<String, VirtualPet> eachRobo : shelterPetRobo.entrySet()) {
-			petStatusRobo += eachRobo.getValue().getName() + "\t " + eachRobo.getValue().getOil() + "\t "
-					+ eachRobo.getValue().getBatteryLife() + "\t " + eachRobo.getValue().getHappiness() + "\n";
-		}
-		return petStatusRobo;
+		return petStatus;
 	}
 
 	public String option5Display() {
