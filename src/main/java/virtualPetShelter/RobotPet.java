@@ -3,7 +3,7 @@ package virtualPetShelter;
 public class RobotPet extends VirtualPet {
 	private int oil;
 	private int batteryLevel;
-	private int happiness;
+	int happiness;
 
 	public RobotPet(String name, String description) {
 		super(name, description);
@@ -13,6 +13,8 @@ public class RobotPet extends VirtualPet {
 		super(name, description);
 		this.oil = oil;
 		this.batteryLevel = batteryLevel;
+		this.happiness = happiness;
+
 	}
 
 	public int getOil() {
@@ -21,6 +23,11 @@ public class RobotPet extends VirtualPet {
 
 	public int getBatteryLevel() {
 		return batteryLevel;
+	}
+
+	@Override
+	public int getHappiness() {
+		return happiness;
 	}
 
 }

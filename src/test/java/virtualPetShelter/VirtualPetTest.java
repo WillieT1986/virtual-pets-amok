@@ -9,7 +9,7 @@ public class VirtualPetTest {
 
 	@Test
 	public void shouldConstructPetNameAndDescription() {
-		VirtualPet underTest = new VirtualPet("name", "description");
+		Happiness underTest = new VirtualPet("name", "description");
 		assertNotNull(underTest);
 	}
 
@@ -29,7 +29,7 @@ public class VirtualPetTest {
 
 	@Test
 	public void shouldReturnVirtualPetNameDescriptionHungerWaterAndBoredom() {
-		VirtualPet underTest = new VirtualPet("name", "description", 0, 0, 0, 0, 0);
+		Happiness underTest = new VirtualPet("name", "description", 0, 0, 0, 0, 0);
 		assertNotNull(underTest);
 	}
 
@@ -63,27 +63,13 @@ public class VirtualPetTest {
 
 	@Test
 	public void shouldConstructNameDescriptionOilingBatteryLevelAndHappinessForRobotDog() {
-		VirtualPet underTest = new VirtualPet("name", "description");
+		Happiness underTest = new VirtualPet("name", "description");
 		assertNotNull(underTest);
 	}
 
-	// @Test
-	// public void shouldReturnRobotDogOiling() {
-	// VirtualPet underTest = new VirtualPet("RoboMax", "description");
-	// int check = underTest.getOil();
-	// assertEquals(check, 10);
-	// }
-	//
-	// @Test
-	// public void shouldReturnRobotDogBatteryLevel() {
-	// VirtualPet underTest = new VirtualPet("RoboMax", "description");
-	// int check = underTest.getBatteryLife();
-	// assertEquals(check, 20);
-	// }
-
 	@Test
 	public void shouldReturnRobotDogHappiness() {
-		VirtualPet underTest = new VirtualPet("RoboMax", "description");
+		Happiness underTest = new VirtualPet("RoboMax", "description");
 		int check = underTest.getHappiness();
 		assertEquals(check, 30);
 	}

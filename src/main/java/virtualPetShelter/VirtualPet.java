@@ -1,6 +1,6 @@
 package virtualPetShelter;
 
-public class VirtualPet {
+public class VirtualPet implements Happiness {
 	private String name;
 	private String description;
 	private int hunger;
@@ -72,6 +72,10 @@ public class VirtualPet {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see virtualPetShelter.Happiness#getHappiness()
+	 */
+	@Override
 	public int getHappiness() {
 		return happiness;
 	}

@@ -51,9 +51,9 @@ public class RobotPetTest {
 		assertEquals(check, 40);
 	}
 
-	// @Test
-	// public void shouldReturnHappiness() {
-	// int check = underTest.getHappiness();
-	// assertEquals(check, 35);
-	// }
+	@Test
+	public void shouldReturnHappiness() {
+		int check = underTest.getHappiness();
+		assertEquals(check, 35);
+	}
 }
