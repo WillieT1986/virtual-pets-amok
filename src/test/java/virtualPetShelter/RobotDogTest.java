@@ -14,37 +14,37 @@ public class RobotDogTest {
 	}
 
 	@Test
-	public void shouldReturnDogDescription() {
+	public void shouldReturnRobotDogDescription() {
 		String check = underTest.getDescription();
 		assertEquals(check, "Is a Robot Dog");
 	}
 
+	@Test
+	public void shouldReturnRobotDogOil() {
+		int check = underTest.getOil();
+		assertEquals(check, 20);
+	}
+
 	// @Test
-	// public void shouldReturnDogHunger() {
-	// int check = underTest.getHunger();
-	// assertEquals(check, 20);
-	// }
-	//
-	// @Test
-	// public void shouldReturnDogWater() {
+	// public void shouldReturnRobotDogWater() {
 	// int check = underTest.getWater();
 	// assertEquals(check, 30);
 	// }
 	//
 	// @Test
-	// public void shouldReturnDogBoredom() {
+	// public void shouldReturnRobotDogBoredom() {
 	// int check = underTest.getBoredom();
 	// assertEquals(check, 40);
 	// }
 	//
 	// @Test
-	// public void shouldReturnDogWaste() {
+	// public void shouldReturnRobotDogWaste() {
 	// int check = underTest.getWaste();
 	// assertEquals(check, 50);
 	// }
 	//
 	// @Test
-	// public void shouldReturnDogHappiness() {
+	// public void shouldReturnRobotDogHappiness() {
 	// int check = underTest.getHappiness();
 	// assertEquals(check, 40);
 	// }
