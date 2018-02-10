@@ -6,4 +6,8 @@ public class RobotPet extends VirtualPet {
 		super(name, description);
 	}
 
+	public RobotPet(String name, String description, int oil, int batteryLevel, int happiness) {
+		super(name, description);
+	}
+
 }
