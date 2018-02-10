@@ -74,4 +74,9 @@ public class VirtualPet implements Happiness {
 		return happiness;
 	}
 
+	@Override
+	public String toString() {
+		return name;
+	}
+
 }
