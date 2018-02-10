@@ -61,7 +61,7 @@ public class VirtualPetShelterApp {
 			System.out.println("\t\t **ROBO DOGS**\n");
 			System.out.println("Name\t|Oil\t|Battery |Happiness");
 			System.out.println("--------|-------|--------|---------");
-			// System.out.println(pets.roboStatus());
+			System.out.println(pets.roboStatus());
 			System.out.println("\nWhat would you like to do next?\n");
 
 			System.out.println("1. Feed Organic Pets.");
