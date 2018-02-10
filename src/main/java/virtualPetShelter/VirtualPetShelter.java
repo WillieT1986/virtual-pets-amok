@@ -9,7 +9,7 @@ public class VirtualPetShelter {
 
 	public Map<String, VirtualPet> shelterPetDogs = new HashMap<>();
 	public Map<String, VirtualPet> shelterPetCats = new HashMap<>();
-	// public Map<String, RobotPet> shelterPetRobo = new HashMap<>();
+	public Map<String, RobotPet> shelterPetRobo = new HashMap<>();
 
 	public Collection<VirtualPet> dogs() {
 		return shelterPetDogs.values();
@@ -19,9 +19,9 @@ public class VirtualPetShelter {
 		return shelterPetCats.values();
 	}
 
-	// public Collection<RobotPet> robos() {
-	// return shelterPetRobo.values();
-	// }
+	public Collection<RobotPet> robos() {
+		return shelterPetRobo.values();
+	}
 
 	// Return specific Virtual Pet given its name
 	public void intake(VirtualPet virtualPet) {
@@ -73,17 +73,15 @@ public class VirtualPetShelter {
 		return petStatus;
 	}
 
-	// public String roboStatus() {
-	// String roboStatus = "";
-	// for (Entry<String, RobotPet> eachRobo : shelterPetRobo.entrySet()) {
-	// roboStatus += eachRobo.getValue().getName() + "\t" +
-	// eachRobo.getValue().getDescription() + "\t"
-	// + eachRobo.getValue().getOil() + "\t" + eachRobo.getValue().getBatteryLife()
-	// + "\t"
-	// + eachRobo.getValue().getHappiness() + "\n";
-	// }
-	// return roboStatus;
-	// }
+	public String roboStatus() {
+		String roboStatus = "";
+		for (Entry<String, RobotPet> eachRobo : shelterPetRobo.entrySet()) {
+			roboStatus += eachRobo.getValue().getName() + "\t" + eachRobo.getValue().getDescription() + "\t"
+					+ eachRobo.getValue().getOil() + "\t" + eachRobo.getValue().getBatteryLevel() + "\t"
+					+ eachRobo.getValue().getHappiness() + "\n";
+		}
+		return roboStatus;
+	}
 
 	public String option5Display() {
 		String option5Display = "";
