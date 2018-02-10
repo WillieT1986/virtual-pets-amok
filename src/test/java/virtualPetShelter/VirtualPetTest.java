@@ -76,6 +76,8 @@ public class VirtualPetTest {
 
 	@Test
 	public void shouldReturnRobotDogDescription() {
-
+		VirtualPet underTest = new VirtualPet("RoboMax", "description", 0, 0, 0);
+		String check = underTest.getDescription();
+		assertEquals("description", check);
 	}
 }
