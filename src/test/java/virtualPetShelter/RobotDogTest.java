@@ -34,7 +34,7 @@ public class RobotDogTest {
 	@Test
 	public void shouldReturnOiling() {
 		int check = underTest.getOiling();
-		assertEquals(check, 5);
+		assertEquals(check, 30);
 	}
 
 }
