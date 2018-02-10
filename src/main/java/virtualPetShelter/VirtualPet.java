@@ -12,7 +12,7 @@ public class VirtualPet {
 	private int batteryLevel;
 
 	// Constructor used for name & description of Virtual Pets
-	public VirtualPet(String name, String description, int happiness) {
+	public VirtualPet(String name, String description) {
 		this(name, description, 50, 60, 70, 40, 30);
 	}
 
@@ -85,12 +85,12 @@ public class VirtualPet {
 		return happiness;
 	}
 
-	public int getOiling() {
-		return oiling;
-	}
-
 	public int getBatteryLife() {
 		return batteryLevel;
+	}
+
+	public int getOil() {
+		return oiling;
 	}
 
 }

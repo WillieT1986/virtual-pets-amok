@@ -9,20 +9,20 @@ public class VirtualPetTest {
 
 	@Test
 	public void shouldConstructPetNameAndDescription() {
-		VirtualPet underTest = new VirtualPet("name", "description", 0);
+		VirtualPet underTest = new VirtualPet("name", "description");
 		assertNotNull(underTest);
 	}
 
 	@Test
 	public void shouldReturnVirtualPetName() {
-		VirtualPet underTest = new VirtualPet("name", "description", 0);
+		VirtualPet underTest = new VirtualPet("name", "description");
 		String check = underTest.getName();
 		assertEquals("name", check);
 	}
 
 	@Test
 	public void shouldReturnVirtualPetDescription() {
-		VirtualPet underTest = new VirtualPet("name", "description", 0);
+		VirtualPet underTest = new VirtualPet("name", "description");
 		String check = underTest.getDescription();
 		assertEquals("description", check);
 	}
@@ -62,13 +62,6 @@ public class VirtualPetTest {
 	}
 
 	@Test
-	public void shouldAddHappinessToNameAndDescriptionConstructor() {
-		VirtualPet underTest = new VirtualPet("name", "description", 1);
-		int check = underTest.getHappiness();
-		assertEquals(30, check);
-	}
-
-	@Test
 	public void shouldConstructNameDescriptionOilingBatteryLevelAndHappinessForRobotDog() {
 		VirtualPet underTest = new VirtualPet("name", "description", 0, 0, 0);
 		assertNotNull(underTest);
@@ -77,7 +70,7 @@ public class VirtualPetTest {
 	@Test
 	public void shouldReturnRobotDogOiling() {
 		VirtualPet underTest = new VirtualPet("RoboMax", "description", 10, 0, 0);
-		int check = underTest.getOiling();
+		int check = underTest.getOil();
 		assertEquals(check, 10);
 	}
 

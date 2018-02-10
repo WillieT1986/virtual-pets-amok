@@ -24,7 +24,7 @@ public class VirtualPetShelterTest {
 
 	@Test
 	public void shouldRetrieveVirtualPetName() {
-		VirtualPet check = new VirtualPet(PET_NAME, DESCRIPTION, 0);
+		VirtualPet check = new VirtualPet(PET_NAME, DESCRIPTION);
 		underTest.intake(check);
 		VirtualPet retrieved = underTest.findPet(PET_NAME);
 		assertThat(retrieved, is(check));
@@ -33,8 +33,8 @@ public class VirtualPetShelterTest {
 	@Test
 	public void shouldIntakeMultipleVirtualPetNames() {
 		String anotherName = "Akita";
-		VirtualPet pet = new VirtualPet("Husky", DESCRIPTION, 0);
-		VirtualPet anotherPet = new VirtualPet(anotherName, DESCRIPTION, 0);
+		VirtualPet pet = new VirtualPet("Husky", DESCRIPTION);
+		VirtualPet anotherPet = new VirtualPet(anotherName, DESCRIPTION);
 		underTest.intake(pet);
 		underTest.intake(anotherPet);
 		Collection<VirtualPet> pets = underTest.dogs();
@@ -46,7 +46,7 @@ public class VirtualPetShelterTest {
 
 	@Test
 	public void shouldAdoptVirtualPets() {
-		VirtualPet pet = new VirtualPet("Husky", DESCRIPTION, 0);
+		VirtualPet pet = new VirtualPet("Husky", DESCRIPTION);
 		underTest.adopt(pet.getName());
 
 		assertThat(underTest.doesPetRemain(pet.getName()), is(false));
@@ -55,10 +55,10 @@ public class VirtualPetShelterTest {
 	// Feeding...?
 	@Test
 	public void shouldShelterFeedAllPet() {
-		VirtualPet pet = new VirtualPet("Hold", "Akita", 0);// will be 52
+		VirtualPet pet = new VirtualPet("Hold", "Akita");// will be 52
 		underTest.intake(pet);
 		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 0, 0, 0, 0)); // will be 2
-		underTest.intake(new VirtualPet("Hold3", "Akita3", 0)); // will be 52
+		underTest.intake(new VirtualPet("Hold3", "Akita3")); // will be 52
 		underTest.feedAll();
 		VirtualPet testPet = underTest.findPet("Hold2");
 		int hunger = testPet.getHunger();
@@ -70,10 +70,10 @@ public class VirtualPetShelterTest {
 
 	@Test
 	public void shouldShelterWaterAllPet() {
-		VirtualPet pet = new VirtualPet("Hold", "Akita", 0);
+		VirtualPet pet = new VirtualPet("Hold", "Akita");
 		underTest.intake(pet);
 		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 2, 0, 0, 0));
-		underTest.intake(new VirtualPet("Hold3", "Akita3", 0));
+		underTest.intake(new VirtualPet("Hold3", "Akita3"));
 		underTest.waterAll();
 		VirtualPet testPet = underTest.findPet("Hold2");
 		int water = testPet.getWater();
@@ -83,7 +83,7 @@ public class VirtualPetShelterTest {
 
 	@Test
 	public void shouldShelterPlayWithHold() {
-		VirtualPet pet = new VirtualPet("Hold", DESCRIPTION, 0);
+		VirtualPet pet = new VirtualPet("Hold", DESCRIPTION);
 		underTest.intake(pet);
 		underTest.play("Hold");
 		assertEquals(76, underTest.findPet("Hold").getBoredom());

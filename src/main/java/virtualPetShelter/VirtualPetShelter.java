@@ -64,13 +64,30 @@ public class VirtualPetShelter {
 	}
 
 	public String petStatus() {
-		String petStatus = "";
-		for (Entry<String, VirtualPet> eachPet : shelterPetDogs.entrySet()) {
-			petStatus += eachPet.getValue().getName() + "\t   " + eachPet.getValue().getHunger() + "\t   "
-					+ eachPet.getValue().getWater() + "\t    " + eachPet.getValue().getBoredom() + "\t    "
-					+ eachPet.getValue().getWaste() + "\n";
+		String petStatusDog = "";
+		for (Entry<String, VirtualPet> eachDog : shelterPetDogs.entrySet()) {
+			petStatusDog += eachDog.getValue().getName() + "\t " + eachDog.getValue().getHunger() + "\t "
+					+ eachDog.getValue().getWater() + "\t " + eachDog.getValue().getBoredom() + "\t "
+					+ eachDog.getValue().getWaste() + "\t " + eachDog.getValue().getHappiness() + "\n";
+
+			String petStatusCat = "";
+			for (Entry<String, VirtualPet> eachCat : shelterPetCats.entrySet()) {
+				petStatusCat += eachCat.getValue().getName() + "\t " + eachCat.getValue().getHunger() + "\t "
+						+ eachCat.getValue().getWater() + "\t " + eachCat.getValue().getBoredom() + "\t "
+						+ eachCat.getValue().getWaste() + "\t " + eachCat.getValue().getHappiness() + "\n";
+			}
+			return petStatusCat;
 		}
-		return petStatus;
+		return petStatusDog;
+	}
+
+	public String petStatusRobo() {
+		String petStatusRobo = "";
+		for (Entry<String, VirtualPet> eachRobo : shelterPetRobo.entrySet()) {
+			petStatusRobo += eachRobo.getValue().getName() + "\t " + eachRobo.getValue().getOil() + "\t "
+					+ eachRobo.getValue().getBatteryLife() + "\t " + eachRobo.getValue().getHappiness() + "\n";
+		}
+		return petStatusRobo;
 	}
 
 	public String option5Display() {
