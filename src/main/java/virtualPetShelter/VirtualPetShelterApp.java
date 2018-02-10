@@ -19,6 +19,11 @@ public class VirtualPetShelterApp {
 		Cat cat3 = new Cat("Snowbal", "Kitten found in a box under a porch.", 50, 40, 50, 60, 70);
 		Cat cat4 = new Cat("Yoohoo", "Skiddish and ungrateful.", 50, 40, 50, 80, 40);
 
+		RobotDog robo1 = new RobotDog("Jax", "Description for Jax.", 50, 60, 70);
+		RobotDog robo2 = new RobotDog("Little", "Description for Little.", 40, 50, 60);
+		RobotDog robo3 = new RobotDog("Slacker", "Description for Slacker.", 70, 40, 80);
+		RobotDog robo4 = new RobotDog("Metal", "Description for Metal.", 50, 60, 40);
+
 		pets.add(dog1);
 		pets.add(dog2);
 		pets.add(dog3);
@@ -29,18 +34,10 @@ public class VirtualPetShelterApp {
 		pets.add(cat3);
 		pets.add(cat4);
 
-		// VirtualPetShelter robos = new VirtualPetShelter();
-		// RobotDog robo1 = new RobotDog("Jax", "Description for Jax.", 50, 60, 70);
-		// RobotDog robo2 = new RobotDog("Little", "Description for Little.", 40, 50,
-		// 60);
-		// RobotDog robo3 = new RobotDog("Slacker", "Description for Slacker.", 70, 40,
-		// 80);
-		// RobotDog robo4 = new RobotDog("Metal", "Description for Metal.", 50, 60, 40);
-		//
-		// robos.add(robo1);
-		// robos.add(robo2);
-		// robos.add(robo3);
-		// robos.add(robo4);
+		pets.add(robo1);
+		pets.add(robo2);
+		pets.add(robo3);
+		pets.add(robo4);
 
 		String decision = "";
 		while (!decision.equalsIgnoreCase("Yes")) {
@@ -51,24 +48,20 @@ public class VirtualPetShelterApp {
 			System.out.println("This is the status of the Shelter Pet's: \n");
 
 			System.out.println("\t\t     **DOGS**\n");
-			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");// the \t allows console to align
-																						// output in columns
+			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness"); // output in columns
 			System.out.println("--------|-------|-------|--------|-------|---------");
 			System.out.println(pets.dogStatus());
-			// System.out.println(dogs.petStatus());
-			System.out.println();
+
 			System.out.println("\t\t     **CATS**\n");
-			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");// the \t allows console to align
-			// output in columns
+			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");
 			System.out.println("--------|-------|-------|--------|-------|---------");
-			// System.out.println(pets.catStatus());
+			System.out.println(pets.catStatus());
 			System.out.println();
 
 			System.out.println("\t\t **ROBO DOGS**\n");
-			System.out.println("Name\t|Oil\t|Battery |Happiness");// the \t allows console to align
-																	// output in columns
+			System.out.println("Name\t|Oil\t|Battery |Happiness");
 			System.out.println("--------|-------|--------|---------");
-			// System.out.println(robos.roboStatus());
+			// System.out.println(pets.roboStatus());
 			System.out.println("\nWhat would you like to do next?\n");
 
 			System.out.println("1. Feed Organic Pets.");

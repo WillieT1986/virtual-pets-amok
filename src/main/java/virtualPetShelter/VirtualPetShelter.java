@@ -8,30 +8,21 @@ import java.util.Map.Entry;
 public class VirtualPetShelter {
 
 	public Map<String, VirtualPet> shelterPets = new HashMap<>();
-	// public Map<String, VirtualPet> shelterPetCats = new HashMap<>();
-	// public Map<String, RobotPet> shelterPetRobo = new HashMap<>();
+	// public Map<String, RobotPet> shelterRoboPets = new HashMap<>();
 
 	public Collection<VirtualPet> pets() {
 		return shelterPets.values();
 	}
 
-	// public Collection<VirtualPet> dogs() {
-	// return shelterPetDogs.values();
-	// }
-	//
-	// public Collection<VirtualPet> cats() {
-	// return shelterPetCats.values();
-	// }
-	//
-	// public Collection<RobotPet> robos() {
-	// return shelterPetRobo.values();
+	// public Collection<RobotPet> roboPets() {
+	// return shelterRoboPets.values();
 	// }
 
 	// Return specific Virtual Pet given its name
 	public void intake(VirtualPet virtualPet) {
 		String newName = virtualPet.getName();
 		shelterPets.put(newName, virtualPet);
-		// shelterPetCats.put(newName, virtualPet);
+		// intake ROBO PETS HERE???
 	}
 
 	public VirtualPet findPet(String petName) {
@@ -76,27 +67,23 @@ public class VirtualPetShelter {
 		return dogStatus;
 	}
 
-	// public String petStatus() {
-	// String petStatus = "";
-	// for (Entry<String, VirtualPet> eachPet : shelterPets.entrySet()) {
-	// petStatus += eachPet.getValue().getName() + "\t " +
-	// eachPet.getValue().getHunger() + "\t "
-	// + eachPet.getValue().getWater() + "\t " + eachPet.getValue().getBoredom() +
-	// "\t "
-	// + eachPet.getValue().getWaste() + "\t " + eachPet.getValue().getHappiness() +
-	// "\n";
-	// }
-	// return petStatus;
-	// }
+	public String catStatus() {
+		String catStatus = "";
+		for (VirtualPet eachPet : shelterPets.values())
+			if (eachPet instanceof Cat) {
+				catStatus += eachPet.getName() + "\t " + eachPet.getHunger() + "\t " + eachPet.getWater() + "\t "
+						+ eachPet.getBoredom() + "\t " + eachPet.getWaste() + "\t " + eachPet.getHappiness() + "\n";
+			}
+		return catStatus;
+	}
 
 	// public String roboStatus() {
 	// String roboStatus = "";
-	// for (Entry<String, RobotPet> eachRobo : shelterPetRobo.entrySet()) {
-	// roboStatus += eachRobo.getValue().getName() + "\t" +
-	// eachRobo.getValue().getDescription() + "\t"
-	// + eachRobo.getValue().getOil() + "\t" + eachRobo.getValue().getBatteryLevel()
-	// + "\t"
-	// + eachRobo.getValue().getHappiness() + "\n";
+	// for (RobotPet eachPet : shelterRoboPets.values())
+	// if (eachPet instanceof RobotDog) {
+	// System.out.println(eachPet.getName() + "\t" + eachPet.getDescription() + "\t"
+	// + eachPet.getOil() + "\t"
+	// + eachPet.getBatteryLevel() + "\t" + eachPet.getHappiness());
 	// }
 	// return roboStatus;
 	// }
