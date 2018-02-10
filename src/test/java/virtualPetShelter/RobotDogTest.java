@@ -28,25 +28,13 @@ public class RobotDogTest {
 	@Test
 	public void shouldReturnRobotDogBatteryLevel() {
 		int check = underTest.getBatteryLevel();
-		assertEquals(check, 30);
+		assertEquals(check, 50);
 	}
 
-	// @Test
-	// public void shouldReturnRobotDogBoredom() {
-	// int check = underTest.getBoredom();
-	// assertEquals(check, 40);
-	// }
-	//
-	// @Test
-	// public void shouldReturnRobotDogWaste() {
-	// int check = underTest.getWaste();
-	// assertEquals(check, 50);
-	// }
-	//
-	// @Test
-	// public void shouldReturnRobotDogHappiness() {
-	// int check = underTest.getHappiness();
-	// assertEquals(check, 40);
-	// }
+	@Test
+	public void shouldReturnRobotDogHappiness() {
+		int check = underTest.getHappiness();
+		assertEquals(check, 60);
+	}
 
 }
