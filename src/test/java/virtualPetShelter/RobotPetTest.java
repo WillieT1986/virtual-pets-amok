@@ -17,7 +17,7 @@ public class RobotPetTest {
 
 	@Before
 	public void setup() {
-		underTest = new RobotPet(PET_NAME, DESCRIPTION, OIL, BATTERY_LEVEL, HAPPINESS);
+		underTest = new RobotPet(PET_NAME, DESCRIPTION);
 	}
 
 	@Test
