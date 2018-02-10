@@ -25,4 +25,9 @@ public class RobotDogTest {
 		assertEquals(check, PET_NAME);
 	}
 
+	@Test
+	public void shouldReturnBatteryLevel() {
+		int check = underTest.getBatteryLevel();
+		assertEquals(check, 10);
+	}
 }
