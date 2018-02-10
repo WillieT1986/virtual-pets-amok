@@ -13,12 +13,12 @@ public class RobotDogTest {
 		assertEquals(check, "Jax");
 	}
 
-	// @Test
-	// public void shouldReturnDogDescription() {
-	// String check = underTest.getDescription();
-	// assertEquals(check, "Is a Robot Dog");
-	// }
-	//
+	@Test
+	public void shouldReturnDogDescription() {
+		String check = underTest.getDescription();
+		assertEquals(check, "Is a Robot Dog");
+	}
+
 	// @Test
 	// public void shouldReturnDogHunger() {
 	// int check = underTest.getHunger();
