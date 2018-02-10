@@ -37,4 +37,15 @@ public class RobotDogTest {
 		assertEquals(check, 30);
 	}
 
+	@Test
+	public void shouldReturnBatteryLevel() {
+		int check = underTest.getBatteryLevel();
+		assertEquals(check, 40);
+	}
+
+	@Test
+	public void shouldReturnHappiness() {
+		int check = underTest.getHappiness();
+		assertEquals(check, 30); // why does this pull from virtualPet and not RobotDogTest?
+	}
 }

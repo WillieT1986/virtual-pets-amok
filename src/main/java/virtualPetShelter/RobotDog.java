@@ -14,4 +14,8 @@ public class RobotDog extends VirtualPet {
 		return oiling;
 	}
 
+	public int getBatteryLevel() {
+		return batteryLevel;
+	}
+
 }
