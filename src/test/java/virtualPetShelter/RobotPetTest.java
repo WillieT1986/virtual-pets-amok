@@ -18,7 +18,7 @@ public class RobotPetTest {
 
 	@Before
 	public void setup() {
-		underTest = new RobotPet(PET_NAME, DESCRIPTION);
+		// underTest = new RobotPet(PET_NAME, DESCRIPTION);
 		underTest = new RobotPet(PET_NAME, DESCRIPTION, OIL, BATTERY_LEVEL, HAPPINESS);
 	}
 
@@ -39,18 +39,18 @@ public class RobotPetTest {
 		assertNotNull(underTest);
 	}
 
-	// @Test
-	// public void shouldReturnOil() {
-	// int check = underTest.getOil();
-	// assertEquals(check, 30);
-	// }
-	//
-	// @Test
-	// public void shouldReturnBatteryLevel() {
-	// int check = underTest.getBatteryLife();
-	// assertEquals(check, 40);
-	// }
-	//
+	@Test
+	public void shouldReturnOil() {
+		int check = underTest.getOil();
+		assertEquals(30, check);
+	}
+
+	@Test
+	public void shouldReturnBatteryLevel() {
+		int check = underTest.getBatteryLevel();
+		assertEquals(check, 40);
+	}
+
 	// @Test
 	// public void shouldReturnHappiness() {
 	// int check = underTest.getHappiness();
