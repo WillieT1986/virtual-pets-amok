@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-public class RobotDogTest {
+public class RobotPetTest {
 
 	private static final String PET_NAME = "RoboMax";
 	private static final String DESCRIPTION = "description";
@@ -13,11 +13,11 @@ public class RobotDogTest {
 	private static final int BATTERY_LEVEL = 40;
 	private static final int HAPPINESS = 35;
 
-	private RobotDog underTest;
+	private RobotPet underTest;
 
 	@Before
 	public void setup() {
-		underTest = new RobotDog(PET_NAME, DESCRIPTION, OIL, BATTERY_LEVEL, HAPPINESS);
+		underTest = new RobotPet(PET_NAME, DESCRIPTION, OIL, BATTERY_LEVEL, HAPPINESS);
 	}
 
 	@Test

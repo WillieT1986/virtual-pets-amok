@@ -31,16 +31,18 @@ public class VirtualPetShelterApp {
 		cats.add(cat3);
 		cats.add(cat4);
 
-		VirtualPetShelter robos = new VirtualPetShelter();
-		VirtualPet robo1 = new VirtualPet("Jax", "Made from aluminum.", 50, 60, 70);
-		VirtualPet robo2 = new VirtualPet("Little", "Made from Copper.", 40, 50, 60);
-		VirtualPet robo3 = new VirtualPet("Slacker", "Made in China.", 70, 40, 80);
-		VirtualPet robo4 = new VirtualPet("Metal", "Location scratched off, made of wood..", 50, 60, 40);
-
-		robos.add(robo1);
-		robos.add(robo2);
-		robos.add(robo3);
-		robos.add(robo4);
+		// VirtualPetShelter robos = new VirtualPetShelter();
+		// RobotDog robo1 = new RobotDog("Jax", "Description for Jax.", 50, 60, 70);
+		// RobotDog robo2 = new RobotDog("Little", "Description for Little.", 40, 50,
+		// 60);
+		// RobotDog robo3 = new RobotDog("Slacker", "Description for Slacker.", 70, 40,
+		// 80);
+		// RobotDog robo4 = new RobotDog("Metal", "Description for Metal.", 50, 60, 40);
+		//
+		// robos.add(robo1);
+		// robos.add(robo2);
+		// robos.add(robo3);
+		// robos.add(robo4);
 
 		String decision = "";
 		while (!decision.equalsIgnoreCase("Yes")) {
@@ -68,7 +70,7 @@ public class VirtualPetShelterApp {
 			System.out.println("Name\t|Oil\t|Battery |Happiness");// the \t allows console to align
 																	// output in columns
 			System.out.println("--------|-------|--------|---------");
-			System.out.println(robos.petStatus());
+			// System.out.println(robos.roboStatus());
 			System.out.println("\nWhat would you like to do next?\n");
 
 			System.out.println("1. Feed Organic Pets.");
