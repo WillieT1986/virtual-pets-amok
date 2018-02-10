@@ -8,14 +8,9 @@ import java.util.Map.Entry;
 public class VirtualPetShelter {
 
 	public Map<String, VirtualPet> shelterPets = new HashMap<>();
-	public Map<String, RobotPet> shelterRoboPets = new HashMap<>();
 
 	public Collection<VirtualPet> pets() {
 		return shelterPets.values();
-	}
-
-	public Collection<RobotPet> roboPets() {
-		return shelterRoboPets.values();
 	}
 
 	// Return specific Virtual Pet given its name
@@ -82,10 +77,11 @@ public class VirtualPetShelter {
 
 	public String roboStatus() {
 		String roboStatus = "";
-		for (RobotPet eachPet : shelterRoboPets.values())
+		for (VirtualPet eachPet : shelterPets.values())
 			if (eachPet instanceof RobotDog) {
-				roboStatus += eachPet.getName() + "\t" + eachPet.getDescription() + "\t" + eachPet.getOil() + "\t"
-						+ eachPet.getBatteryLevel() + "\t" + eachPet.getHappiness() + "\n";
+				RobotDog dog = (RobotDog) eachPet;
+				roboStatus += dog.getName() + "\t   " + dog.getOil() + "\t    " + dog.getBatteryLevel() + "\t     "
+						+ dog.getHappiness() + "\n";
 			}
 		return roboStatus;
 	}
