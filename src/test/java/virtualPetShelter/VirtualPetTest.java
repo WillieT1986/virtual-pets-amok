@@ -61,4 +61,21 @@ public class VirtualPetTest {
 		assertEquals(1, check);
 	}
 
+	@Test
+	public void shouldReturnRobotDogConstructorNameDescriptionOilingBatteryLevelAndHappiness() {
+		VirtualPet underTest = new VirtualPet("RoboMax", "description", 0, 0, 0);
+		assertNotNull(underTest);
+	}
+
+	@Test
+	public void shouldReturnRobotDogName() {
+		VirtualPet underTest = new VirtualPet("RoboMax", "description", 0, 0, 0);
+		String check = underTest.getName();
+		assertEquals("RoboMax", check);
+	}
+
+	@Test
+	public void shouldReturnRobotDogDescription() {
+
+	}
 }

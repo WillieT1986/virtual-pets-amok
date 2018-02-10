@@ -8,10 +8,12 @@ public class VirtualPet {
 	private int boredom;
 	private int waste;
 
+	// Constructor used for name & description of Virtual Pets
 	public VirtualPet(String name, String description) {
 		this(name, description, 50, 60, 70, 40);
 	}
 
+	// Constructor userd for Organic Virtual Pets
 	public VirtualPet(String name, String description, int hunger, int water, int boredom, int waste) {
 		this.name = name;
 		this.description = description;
@@ -19,7 +21,12 @@ public class VirtualPet {
 		this.water = water;
 		this.boredom = boredom;
 		this.waste = waste;
+	}
 
+	// Constructor used for RobotDog
+	public VirtualPet(String name, String description, int oiling, int batteryLevel, int happiness) {
+		this.name = name;
+		this.description = description;
 	}
 
 	public String getName() {
