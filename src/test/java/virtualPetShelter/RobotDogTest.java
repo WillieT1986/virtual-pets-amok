@@ -22,7 +22,7 @@ public class RobotDogTest {
 	@Test
 	public void shouldReturnRobotDogOil() {
 		int check = underTest.getOil();
-		assertEquals(check, 20);
+		assertEquals(check, 40);
 	}
 
 	// @Test
