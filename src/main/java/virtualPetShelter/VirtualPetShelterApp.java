@@ -23,6 +23,9 @@ public class VirtualPetShelterApp {
 		VirtualPet cat4 = new VirtualPet("Yoohoo", "Skiddish and ungrateful.", 50, 40, 50, 80, 40);
 
 		VirtualPet robo1 = new VirtualPet("Jax", "Made from aluminum.", 50, 60, 70);
+		VirtualPet robo2 = new VirtualPet("Little", "Made from Copper.", 40, 50, 60);
+		VirtualPet robo3 = new VirtualPet("Slacker", "Made in China.", 70, 40, 80);
+		VirtualPet robo4 = new VirtualPet("Metal", "Location scratched off, made of wood..", 50, 60, 40);
 
 		dogs.add(dog1);
 		dogs.add(dog2);
@@ -35,6 +38,9 @@ public class VirtualPetShelterApp {
 		cats.add(cat4);
 
 		robos.add(robo1);
+		robos.add(robo2);
+		robos.add(robo3);
+		robos.add(robo4);
 
 		String decision = "";
 		while (!decision.equalsIgnoreCase("Yes")) {
@@ -52,6 +58,13 @@ public class VirtualPetShelterApp {
 			System.out.println();
 
 			System.out.println("\t\t    **CATS**\n");
+			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");// the \t allows console to align
+																						// output in columns
+			System.out.println("--------|-------|-------|--------|-------|---------");
+			System.out.println(cats.petStatus());
+			System.out.println();
+
+			System.out.println("\t\t    **ROBO DOGS**\n");
 			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");// the \t allows console to align
 																						// output in columns
 			System.out.println("--------|-------|-------|--------|-------|---------");
