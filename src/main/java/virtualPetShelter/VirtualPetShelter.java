@@ -62,7 +62,8 @@ public class VirtualPetShelter {
 		String petStatus = "";
 		for (Entry<String, VirtualPet> eachPet : shelterPetDogs.entrySet()) {
 			petStatus += eachPet.getValue().getName() + "\t   " + eachPet.getValue().getHunger() + "\t   "
-					+ eachPet.getValue().getWater() + "\t   " + eachPet.getValue().getBoredom() + "\n";
+					+ eachPet.getValue().getWater() + "\t    " + eachPet.getValue().getBoredom() + "\t    "
+					+ eachPet.getValue().getWaste() + "\n";
 		}
 		return petStatus;
 	}

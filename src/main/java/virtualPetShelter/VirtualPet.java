@@ -6,17 +6,19 @@ public class VirtualPet {
 	private int hunger;
 	private int water;
 	private int boredom;
+	private int waste;
 
 	public VirtualPet(String name, String description) {
-		this(name, description, 50, 60, 70);
+		this(name, description, 50, 60, 70, 40);
 	}
 
-	public VirtualPet(String name, String description, int hunger, int water, int boredom) {
+	public VirtualPet(String name, String description, int hunger, int water, int boredom, int waste) {
 		this.name = name;
 		this.description = description;
 		this.hunger = hunger;
 		this.water = water;
 		this.boredom = boredom;
+		this.waste = waste;
 
 	}
 
@@ -38,6 +40,10 @@ public class VirtualPet {
 
 	public int getBoredom() {
 		return boredom;
+	}
+
+	public int getWaste() {
+		return waste;
 	}
 
 	public void feedPet() {

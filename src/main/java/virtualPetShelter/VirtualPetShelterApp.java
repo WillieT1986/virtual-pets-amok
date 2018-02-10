@@ -10,15 +10,16 @@ public class VirtualPetShelterApp {
 		VirtualPetShelter dogs = new VirtualPetShelter();
 		VirtualPetShelter cats = new VirtualPetShelter();
 
-		VirtualPet dog1 = new VirtualPet("Hold", "Aged and fragile.", 40, 50, 60);
-		VirtualPet dog2 = new VirtualPet("Akita", "Wolf Hybrid, friendly,protective...", 50, 40, 50);
-		VirtualPet dog3 = new VirtualPet("Blue", "Family oriented and kid friendly.", 60, 60, 60);
-		VirtualPet dog4 = new VirtualPet("Ringo", "Dog of the Vikings. Studier than a Wolf, yet gentle.", 70, 80, 80);
+		VirtualPet dog1 = new VirtualPet("Hold", "Aged and fragile.", 40, 50, 60, 40);
+		VirtualPet dog2 = new VirtualPet("Akita", "Wolf Hybrid, friendly,protective...", 50, 40, 50, 50);
+		VirtualPet dog3 = new VirtualPet("Blue", "Family oriented and kid friendly.", 60, 60, 60, 60);
+		VirtualPet dog4 = new VirtualPet("Ringo", "Dog of the Vikings. Studier than a Wolf, yet gentle.", 70, 80, 80,
+				60);
 
-		VirtualPet cat1 = new VirtualPet("Tara", "Young and Restless.", 50, 40, 50);
-		VirtualPet cat2 = new VirtualPet("Kitty", "Kitten found in a box under a porch.", 50, 40, 50);
-		VirtualPet cat3 = new VirtualPet("Snowbal", "Kitten found in a box under a porch.", 50, 40, 50);
-		VirtualPet cat4 = new VirtualPet("Yoohoo", "Skiddish and ungrateful.", 50, 40, 50);
+		VirtualPet cat1 = new VirtualPet("Tara", "Young and Restless.", 50, 40, 50, 70);
+		VirtualPet cat2 = new VirtualPet("Kitty", "Kitten found in a box under a porch.", 50, 40, 50, 70);
+		VirtualPet cat3 = new VirtualPet("Snowbal", "Kitten found in a box under a porch.", 50, 40, 50, 60);
+		VirtualPet cat4 = new VirtualPet("Yoohoo", "Skiddish and ungrateful.", 50, 40, 50, 80);
 
 		dogs.add(dog1);
 		dogs.add(dog2);
@@ -38,17 +39,17 @@ public class VirtualPetShelterApp {
 
 			System.out.println("This is the status of the Shelter Pet's: \n");
 
-			System.out.println("**DOGS**");
-			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom");// the \t allows console to align output in columns
-			System.out.println("--------|-------|-------|-------");
-			System.out.println();
+			System.out.println("\t\t    **DOGS**\n");
+			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");// the \t allows console to align
+																						// output in columns
+			System.out.println("--------|-------|-------|--------|-------|---------");
 			System.out.println(dogs.petStatus());
 			System.out.println();
 
-			System.out.println("**CATS**");
-			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom");// the \t allows console to align output in columns
-			System.out.println("--------|-------|-------|-------");
-			System.out.println();
+			System.out.println("\t\t    **CATS**\n");
+			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");// the \t allows console to align
+																						// output in columns
+			System.out.println("--------|-------|-------|--------|-------|---------");
 			System.out.println(cats.petStatus());
 			System.out.println("\nWhat would you like to do next?\n");
 
@@ -89,7 +90,7 @@ public class VirtualPetShelterApp {
 					String petName = input.nextLine();
 					cats.play(petName);
 					System.out.println(
-							"You took" + petName + " for a walk. Said cat was lazy and rode on your shoulder instead.");
+							"Took" + petName + " for a walk. Said cat was lazy and rode on your shoulder instead.");
 				}
 
 			} else if (optionEntered.equals("5")) { // OPTION 5

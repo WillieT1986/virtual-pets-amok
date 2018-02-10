@@ -57,7 +57,7 @@ public class VirtualPetShelterTest {
 	public void shouldShelterFeedAllPet() {
 		VirtualPet pet = new VirtualPet("Hold", "Akita");// will be 52
 		underTest.intake(pet);
-		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 0, 0)); // will be 2
+		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 0, 0, 0)); // will be 2
 		underTest.intake(new VirtualPet("Hold3", "Akita3")); // will be 52
 		underTest.feedAll();
 		VirtualPet testPet = underTest.findPet("Hold2");
@@ -72,7 +72,7 @@ public class VirtualPetShelterTest {
 	public void shouldShelterWaterAllPet() {
 		VirtualPet pet = new VirtualPet("Hold", "Akita");
 		underTest.intake(pet);
-		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 2, 0));
+		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 2, 0, 0));
 		underTest.intake(new VirtualPet("Hold3", "Akita3"));
 		underTest.waterAll();
 		VirtualPet testPet = underTest.findPet("Hold2");
@@ -86,6 +86,6 @@ public class VirtualPetShelterTest {
 		VirtualPet pet = new VirtualPet("Hold", DESCRIPTION);
 		underTest.intake(pet);
 		underTest.play("Hold");
-		assertEquals(75, underTest.findPet("Hold").getBoredom());
+		assertEquals(76, underTest.findPet("Hold").getBoredom());
 	}
 }
