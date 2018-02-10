@@ -67,19 +67,13 @@ public class VirtualPetShelter {
 		shelterPets.put(pet.getName(), pet);
 	}
 
-	public String petStatus() {
-		String petStatus = "";
-		for (Entry<String, VirtualPet> eachPet : shelterPets.entrySet()) {
-			petStatus += eachPet.getValue().getName() + "\t " + eachPet.getValue().getHunger() + "\t "
-					+ eachPet.getValue().getWater() + "\t " + eachPet.getValue().getBoredom() + "\t "
-					+ eachPet.getValue().getWaste() + "\t " + eachPet.getValue().getHappiness() + "\n";
+	public String dogStatus() {
+		String dogStatus = "";
+		for (VirtualPet eachPet : shelterPets.values())
 			if (eachPet instanceof Dog) {
 				System.out.println((Dog) eachPet);
-			} else if (eachPet instanceof Cat) {
-				System.out.println((Cat) eachPet);
 			}
-		}
-		return petStatus;
+		return dogStatus;
 	}
 
 	// public String petStatus() {
