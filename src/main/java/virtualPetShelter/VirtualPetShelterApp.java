@@ -56,9 +56,8 @@ public class VirtualPetShelterApp {
 			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");
 			System.out.println("--------|-------|-------|--------|-------|---------");
 			System.out.println(pets.catStatus());
-			System.out.println();
 
-			System.out.println("\t\t **ROBO DOGS**\n");
+			System.out.println("\t    **ROBO DOGS**\n");
 			System.out.println("Name\t|Oil\t|Battery |Happiness");
 			System.out.println("--------|-------|--------|---------");
 			System.out.println(pets.roboStatus());
