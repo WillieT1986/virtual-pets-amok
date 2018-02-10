@@ -11,7 +11,7 @@ public class RobotDogTest {
 	private static final String DESCRIPTION = "description";
 	private static final int OIL = 30;
 	private static final int BATTERY_LEVEL = 40;
-	private static final int HAPPINESS = 35; // does the stat in VirtualPet override this?
+	private static final int HAPPINESS = 35;
 
 	private RobotDog underTest;
 
@@ -40,13 +40,13 @@ public class RobotDogTest {
 
 	@Test
 	public void shouldReturnBatteryLevel() {
-		int check = underTest.getBatteryLevel();
+		int check = underTest.getBatteryLife();
 		assertEquals(check, 40);
 	}
 
 	@Test
 	public void shouldReturnHappiness() {
 		int check = underTest.getHappiness();
-		assertEquals(check, 30); // why does this pull from virtualPet and not RobotDogTest?
+		assertEquals(check, 35);
 	}
 }

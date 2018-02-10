@@ -68,4 +68,31 @@ public class VirtualPetTest {
 		assertEquals(30, check);
 	}
 
+	@Test
+	public void shouldConstructNameDescriptionOilingBatteryLevelAndHappinessForRobotDog() {
+		VirtualPet underTest = new VirtualPet("name", "description", 0, 0, 0);
+		assertNotNull(underTest);
+	}
+
+	@Test
+	public void shouldReturnRobotDogOiling() {
+		VirtualPet underTest = new VirtualPet("RoboMax", "description", 10, 0, 0);
+		int check = underTest.getOiling();
+		assertEquals(check, 10);
+	}
+
+	@Test
+	public void shouldReturnRobotDogBatteryLevel() {
+		VirtualPet underTest = new VirtualPet("RoboMax", "description", 0, 20, 0);
+		int check = underTest.getBatteryLife();
+		assertEquals(check, 20);
+	}
+
+	@Test
+	public void shouldReturnRobotDogHappiness() {
+		VirtualPet underTest = new VirtualPet("RoboMax", "description", 0, 0, 30);
+		int check = underTest.getHappiness();
+		assertEquals(check, 30);
+	}
+
 }

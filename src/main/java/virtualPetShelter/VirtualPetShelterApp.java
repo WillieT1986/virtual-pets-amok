@@ -9,6 +9,7 @@ public class VirtualPetShelterApp {
 
 		VirtualPetShelter dogs = new VirtualPetShelter();
 		VirtualPetShelter cats = new VirtualPetShelter();
+		VirtualPetShelter robos = new VirtualPetShelter();
 
 		VirtualPet dog1 = new VirtualPet("Hold", "Aged and fragile.", 40, 50, 60, 40, 60);
 		VirtualPet dog2 = new VirtualPet("Akita", "Wolf Hybrid, friendly,protective...", 50, 40, 50, 50, 50);
@@ -21,6 +22,8 @@ public class VirtualPetShelterApp {
 		VirtualPet cat3 = new VirtualPet("Snowbal", "Kitten found in a box under a porch.", 50, 40, 50, 60, 70);
 		VirtualPet cat4 = new VirtualPet("Yoohoo", "Skiddish and ungrateful.", 50, 40, 50, 80, 40);
 
+		VirtualPet robo1 = new VirtualPet("Jax", "Made from aluminum.", 50, 60, 70);
+
 		dogs.add(dog1);
 		dogs.add(dog2);
 		dogs.add(dog3);
@@ -30,6 +33,8 @@ public class VirtualPetShelterApp {
 		cats.add(cat2);
 		cats.add(cat3);
 		cats.add(cat4);
+
+		robos.add(robo1);
 
 		String decision = "";
 		while (!decision.equalsIgnoreCase("Yes")) {
