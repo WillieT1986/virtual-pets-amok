@@ -37,7 +37,7 @@ public class VirtualPetShelterTest {
 		VirtualPet anotherPet = new VirtualPet(anotherName, DESCRIPTION);
 		underTest.intake(pet);
 		underTest.intake(anotherPet);
-		Collection<VirtualPet> pets = underTest.dogs();
+		Collection<VirtualPet> pets = underTest.pets();
 		assertThat(pets, containsInAnyOrder(pet, anotherPet));
 		assertTrue(pets.contains(pet));
 		assertTrue(pets.contains(anotherPet));

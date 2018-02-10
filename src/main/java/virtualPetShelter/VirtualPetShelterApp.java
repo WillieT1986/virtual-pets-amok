@@ -7,8 +7,7 @@ public class VirtualPetShelterApp {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
-		VirtualPetShelter dogs = new VirtualPetShelter();
-		VirtualPetShelter cats = new VirtualPetShelter();
+		VirtualPetShelter pets = new VirtualPetShelter();
 
 		VirtualPet dog1 = new VirtualPet("Hold", "Aged and fragile.", 40, 50, 60, 40, 60);
 		VirtualPet dog2 = new VirtualPet("Akita", "Wolf Hybrid, friendly,protective...", 50, 40, 50, 50, 50);
@@ -21,26 +20,28 @@ public class VirtualPetShelterApp {
 		VirtualPet cat3 = new VirtualPet("Snowbal", "Kitten found in a box under a porch.", 50, 40, 50, 60, 70);
 		VirtualPet cat4 = new VirtualPet("Yoohoo", "Skiddish and ungrateful.", 50, 40, 50, 80, 40);
 
-		dogs.add(dog1);
-		dogs.add(dog2);
-		dogs.add(dog3);
-		dogs.add(dog4);
+		pets.add(dog1);
+		pets.add(dog2);
+		pets.add(dog3);
+		pets.add(dog4);
 
-		cats.add(cat1);
-		cats.add(cat2);
-		cats.add(cat3);
-		cats.add(cat4);
+		pets.add(cat1);
+		pets.add(cat2);
+		pets.add(cat3);
+		pets.add(cat4);
 
-		VirtualPetShelter robos = new VirtualPetShelter();
-		RobotDog robo1 = new RobotDog("Jax", "Description for Jax.", 50, 60, 70);
-		RobotDog robo2 = new RobotDog("Little", "Description for Little.", 40, 50, 60);
-		RobotDog robo3 = new RobotDog("Slacker", "Description for Slacker.", 70, 40, 80);
-		RobotDog robo4 = new RobotDog("Metal", "Description for Metal.", 50, 60, 40);
-
-		robos.add(robo1);
-		robos.add(robo2);
-		robos.add(robo3);
-		robos.add(robo4);
+		// VirtualPetShelter robos = new VirtualPetShelter();
+		// RobotDog robo1 = new RobotDog("Jax", "Description for Jax.", 50, 60, 70);
+		// RobotDog robo2 = new RobotDog("Little", "Description for Little.", 40, 50,
+		// 60);
+		// RobotDog robo3 = new RobotDog("Slacker", "Description for Slacker.", 70, 40,
+		// 80);
+		// RobotDog robo4 = new RobotDog("Metal", "Description for Metal.", 50, 60, 40);
+		//
+		// robos.add(robo1);
+		// robos.add(robo2);
+		// robos.add(robo3);
+		// robos.add(robo4);
 
 		String decision = "";
 		while (!decision.equalsIgnoreCase("Yes")) {
@@ -54,21 +55,22 @@ public class VirtualPetShelterApp {
 			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");// the \t allows console to align
 																						// output in columns
 			System.out.println("--------|-------|-------|--------|-------|---------");
-			System.out.println(dogs.petStatus());
+			System.out.println(pets.petStatus());
+			// System.out.println(dogs.petStatus());
 			System.out.println();
 
 			System.out.println("\t\t     **CATS**\n");
 			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");// the \t allows console to align
-																						// output in columns
+			System.out.println(pets.petStatus()); // output in columns
 			System.out.println("--------|-------|-------|--------|-------|---------");
-			System.out.println(cats.petStatus());
+			// System.out.println(cats.petStatus());
 			System.out.println();
 
 			System.out.println("\t\t **ROBO DOGS**\n");
 			System.out.println("Name\t|Oil\t|Battery |Happiness");// the \t allows console to align
 																	// output in columns
 			System.out.println("--------|-------|--------|---------");
-			System.out.println(robos.roboStatus());
+			// System.out.println(robos.roboStatus());
 			System.out.println("\nWhat would you like to do next?\n");
 
 			System.out.println("1. Feed Organic Pets.");
@@ -83,13 +85,13 @@ public class VirtualPetShelterApp {
 
 			String optionEntered = input.nextLine();
 			if (optionEntered.equals("1")) { // OPTION 1
-				dogs.feedAll();
-				cats.feedAll();
+				pets.feedAll();
+				pets.feedAll();
 				System.out.println("You fed all the Dog's & Cat's in the Shelter food.\n");
 
 			} else if (optionEntered.equals("2")) { // OPTION 2
-				dogs.waterAll();
-				cats.waterAll();
+				pets.waterAll();
+				pets.waterAll();
 				System.out.println("You gave all the Dog's & Cat's in the Shelter water.\n");
 
 			} else if (optionEntered.equals("4")) { // OPTION 4
@@ -98,15 +100,15 @@ public class VirtualPetShelterApp {
 				String newDecision = input.nextLine();
 
 				if (newDecision.equalsIgnoreCase("Dogs")) {
-					System.out.println(dogs.option5Display());
+					System.out.println(pets.option5Display());
 					String petName = input.nextLine();
-					dogs.play(petName);
+					pets.play(petName);
 					System.out.println("You took " + petName + " for a walk to the field to play.\n");
 
 				} else if (newDecision.equalsIgnoreCase("Cats")) {
-					System.out.println(cats.option5Display());
+					System.out.println(pets.option5Display());
 					String petName = input.nextLine();
-					cats.play(petName);
+					pets.play(petName);
 					System.out.println(
 							"Took" + petName + " for a walk. Said cat was lazy and rode on your shoulder instead.");
 				}
@@ -114,23 +116,23 @@ public class VirtualPetShelterApp {
 			} else if (optionEntered.equals("5")) { // OPTION 5
 				System.out.println("You've chosen to adopt a pet.");
 				System.out.println("Which pet would you like to adopt?\n");
-				System.out.println(dogs.option5Display());
-				System.out.println(cats.option5Display());
+				System.out.println(pets.option5Display());
+				System.out.println(pets.option5Display());
 				String petName = input.nextLine();
 
 				// Dog Adoption
-				if (!dogs.doesPetRemain(petName)) {
+				if (!pets.doesPetRemain(petName)) {
 					System.out.println("This Dog does not exist.");
 				} else {
-					dogs.adopt(petName);
+					pets.adopt(petName);
 					System.out.println("Congrats on adopting your new Dog \n" + petName + "!");
 				}
 
 				// Cat Adoption
-				if (!cats.doesPetRemain(petName)) {
+				if (!pets.doesPetRemain(petName)) {
 					System.out.println("This Cat does not exit.");
 				} else {
-					cats.adopt(petName);
+					pets.adopt(petName);
 					System.out.println(
 							"Congrats on adopting your new spawn of Satan, the Shelter means Cat \n" + petName + "!");
 				}
@@ -156,7 +158,7 @@ public class VirtualPetShelterApp {
 					System.out.println("Enter a description for the Dog being surrendered: ");
 					String newPetDescription = input.nextLine();
 
-					dogs.add(new VirtualPet(newPetName, newPetDescription));
+					pets.add(new VirtualPet(newPetName, newPetDescription));
 					System.out.println("Your Dog will sure miss you.");
 					System.out.println("Thanks admitting your Dog instead of discarding your Dog elsewhere...\n");
 
@@ -167,7 +169,7 @@ public class VirtualPetShelterApp {
 					System.out.println("Enter a description for the Cat being surrendered: ");
 					String newPetDescription = input.nextLine();
 
-					cats.add(new VirtualPet(newPetName, newPetDescription));
+					pets.add(new VirtualPet(newPetName, newPetDescription));
 					System.out.println("Your Cat will sure miss you.");
 					System.out.println("Thanks admitting your pet instead of discarding your Cat elsewhere...\n");
 				}
@@ -201,8 +203,8 @@ public class VirtualPetShelterApp {
 				}
 
 			}
-			dogs.tickDogs();
-			cats.tickCats();
+			pets.tickDogs();
+			pets.tickCats();
 		} // end while loop
 
 		input.close();

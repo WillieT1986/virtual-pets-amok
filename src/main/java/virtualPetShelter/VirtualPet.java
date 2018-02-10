@@ -8,8 +8,6 @@ public class VirtualPet implements Happiness {
 	private int boredom;
 	private int waste;
 	private int happiness;
-	// private int oil;
-	// private int batteryLevel;
 
 	// Constructor used for name & description of Virtual Pets
 	public VirtualPet(String name, String description) {
@@ -69,23 +67,11 @@ public class VirtualPet implements Happiness {
 		this.water--;
 		this.boredom--;
 		this.waste++;
-
 	}
 
-	/* (non-Javadoc)
-	 * @see virtualPetShelter.Happiness#getHappiness()
-	 */
 	@Override
 	public int getHappiness() {
 		return happiness;
 	}
-
-	// public int getBatteryLife() {
-	// return batteryLevel;
-	// }
-	//
-	// public int getOil() {
-	// return oiling;
-	// }
 
 }
