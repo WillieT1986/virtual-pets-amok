@@ -26,8 +26,15 @@ public class RobotDogTest {
 	}
 
 	@Test
-	public void shouldReturnBatteryLevel() {
-		int check = underTest.getBatteryLevel();
-		assertEquals(check, 10);
+	public void shouldReturnDescription() {
+		String check = underTest.getDescription();
+		assertEquals(check, DESCRIPTION);
 	}
+
+	@Test
+	public void shouldReturnOiling() {
+		int check = underTest.getOiling();
+		assertEquals(check, 5);
+	}
+
 }
