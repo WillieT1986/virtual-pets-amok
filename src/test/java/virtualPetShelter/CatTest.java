@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class CatTest {
 
-	VirtualPet underTest = new Cat("Tara", "Is a cat", 20, 30, 40, 50);
+	VirtualPet underTest = new Cat("Tara", "Is a cat", 20, 30, 40, 50, 35);
 
 	@Test
 	public void shouldReturnCatName() {
@@ -41,8 +41,13 @@ public class CatTest {
 	@Test
 	public void shouldReturnCatWaste() {
 		int check = underTest.getWaste();
-
 		assertEquals(check, 50);
+	}
+
+	@Test
+	public void shouldReturnCatHappiness() {
+		int check = underTest.getHappiness();
+		assertEquals(check, 35);
 	}
 
 }

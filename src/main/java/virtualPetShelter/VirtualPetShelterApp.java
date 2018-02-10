@@ -10,16 +10,16 @@ public class VirtualPetShelterApp {
 		VirtualPetShelter dogs = new VirtualPetShelter();
 		VirtualPetShelter cats = new VirtualPetShelter();
 
-		VirtualPet dog1 = new VirtualPet("Hold", "Aged and fragile.", 40, 50, 60, 40);
-		VirtualPet dog2 = new VirtualPet("Akita", "Wolf Hybrid, friendly,protective...", 50, 40, 50, 50);
-		VirtualPet dog3 = new VirtualPet("Blue", "Family oriented and kid friendly.", 60, 60, 60, 60);
+		VirtualPet dog1 = new VirtualPet("Hold", "Aged and fragile.", 40, 50, 60, 40, 60);
+		VirtualPet dog2 = new VirtualPet("Akita", "Wolf Hybrid, friendly,protective...", 50, 40, 50, 50, 50);
+		VirtualPet dog3 = new VirtualPet("Blue", "Family oriented and kid friendly.", 60, 60, 60, 60, 80);
 		VirtualPet dog4 = new VirtualPet("Ringo", "Dog of the Vikings. Studier than a Wolf, yet gentle.", 70, 80, 80,
-				60);
+				60, 50);
 
-		VirtualPet cat1 = new VirtualPet("Tara", "Young and Restless.", 50, 40, 50, 70);
-		VirtualPet cat2 = new VirtualPet("Kitty", "Kitten found in a box under a porch.", 50, 40, 50, 70);
-		VirtualPet cat3 = new VirtualPet("Snowbal", "Kitten found in a box under a porch.", 50, 40, 50, 60);
-		VirtualPet cat4 = new VirtualPet("Yoohoo", "Skiddish and ungrateful.", 50, 40, 50, 80);
+		VirtualPet cat1 = new VirtualPet("Tara", "Young and Restless.", 50, 40, 50, 70, 40);
+		VirtualPet cat2 = new VirtualPet("Kitty", "Kitten found in a box under a porch.", 50, 40, 50, 70, 30);
+		VirtualPet cat3 = new VirtualPet("Snowbal", "Kitten found in a box under a porch.", 50, 40, 50, 60, 70);
+		VirtualPet cat4 = new VirtualPet("Yoohoo", "Skiddish and ungrateful.", 50, 40, 50, 80, 40);
 
 		dogs.add(dog1);
 		dogs.add(dog2);
@@ -138,7 +138,7 @@ public class VirtualPetShelterApp {
 					System.out.println("Enter a description for the Dog being surrendered: ");
 					String newPetDescription = input.nextLine();
 
-					dogs.add(new VirtualPet(newPetName, newPetDescription));
+					dogs.add(new VirtualPet(newPetName, newPetDescription, 0));
 					System.out.println("Your Dog will sure miss you.");
 					System.out.println("Thanks admitting your Dog instead of discarding your Dog elsewhere...\n");
 
@@ -149,7 +149,7 @@ public class VirtualPetShelterApp {
 					System.out.println("Enter a description for the Cat being surrendered: ");
 					String newPetDescription = input.nextLine();
 
-					cats.add(new VirtualPet(newPetName, newPetDescription));
+					cats.add(new VirtualPet(newPetName, newPetDescription, 0));
 					System.out.println("Your Cat will sure miss you.");
 					System.out.println("Thanks admitting your pet instead of discarding your Cat elsewhere...\n");
 				}

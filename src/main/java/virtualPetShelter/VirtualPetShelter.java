@@ -9,13 +9,18 @@ public class VirtualPetShelter {
 
 	public Map<String, VirtualPet> shelterPetDogs = new HashMap<>();
 	public Map<String, VirtualPet> shelterPetCats = new HashMap<>();
+	public Map<String, VirtualPet> shelterPetRobo = new HashMap<>();
+
+	public Collection<VirtualPet> dogs() {
+		return shelterPetDogs.values();
+	}
 
 	public Collection<VirtualPet> cats() {
 		return shelterPetCats.values();
 	}
 
-	public Collection<VirtualPet> dogs() {
-		return shelterPetDogs.values();
+	public Collection<VirtualPet> robos() {
+		return shelterPetRobo.values();
 	}
 
 	// Return specific Virtual Pet given its name

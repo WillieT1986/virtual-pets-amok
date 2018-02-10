@@ -25,13 +25,6 @@ public class VirtualPet {
 		this.happiness = happiness;
 	}
 
-	// // Constructor used for RobotDog
-	// public VirtualPet(String name, String description, int oiling, int
-	// batteryLevel, int happiness) {
-	// this.name = name;
-	// this.description = description;
-	// }
-
 	public String getName() {
 		return name;
 	}

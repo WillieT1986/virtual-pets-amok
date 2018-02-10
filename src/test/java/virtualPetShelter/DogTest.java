@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class DogTest {
-	VirtualPet underTest = new Dog("Hold", "Is a dog", 20, 30, 40, 50);
+	VirtualPet underTest = new Dog("Hold", "Is a dog", 20, 30, 40, 50, 40);
 
 	@Test
 	public void shouldReturnDogName() {
@@ -41,5 +41,11 @@ public class DogTest {
 	public void shouldReturnDogWaste() {
 		int check = underTest.getWaste();
 		assertEquals(check, 50);
+	}
+
+	@Test
+	public void shouldReturnDogHappiness() {
+		int check = underTest.getHappiness();
+		assertEquals(check, 40);
 	}
 }
