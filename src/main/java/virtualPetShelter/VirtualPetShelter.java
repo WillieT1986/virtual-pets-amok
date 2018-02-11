@@ -17,7 +17,6 @@ public class VirtualPetShelter {
 	public void intake(VirtualPet virtualPet) {
 		String newName = virtualPet.getName();
 		shelterPets.put(newName, virtualPet);
-		// intake ROBO PETS HERE???
 	}
 
 	public VirtualPet findPet(String petName) {

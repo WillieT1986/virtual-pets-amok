@@ -88,4 +88,19 @@ public class VirtualPetShelterTest {
 		underTest.play("Hold");
 		assertEquals(76, underTest.findPet("Hold").getBoredom());
 	}
+
+	@Test
+	public void shouldIntakeMultipleRobotPetNames() {
+		String anotherName = "Metal";
+		RobotPet pet = new RobotPet("Jax", DESCRIPTION);
+		RobotPet anotherPet = new RobotPet(anotherName, DESCRIPTION);
+		underTest.intake(pet);
+		underTest.intake(anotherPet);
+		Collection<VirtualPet> pets = underTest.pets();
+		assertThat(pets, containsInAnyOrder(pet, anotherPet));
+		assertTrue(pets.contains(pet));
+		assertTrue(pets.contains(anotherPet));
+		assertEquals(2, pets.size());
+	}
+
 }

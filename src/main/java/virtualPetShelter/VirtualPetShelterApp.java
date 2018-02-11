@@ -76,13 +76,16 @@ public class VirtualPetShelterApp {
 			String optionEntered = input.nextLine();
 			if (optionEntered.equals("1")) { // OPTION 1
 				pets.feedAll();
-				pets.feedAll();
 				System.out.println("You fed all the Dog's & Cat's in the Shelter food.\n");
 
 			} else if (optionEntered.equals("2")) { // OPTION 2
 				pets.waterAll();
-				pets.waterAll();
 				System.out.println("You gave all the Dog's & Cat's in the Shelter water.\n");
+
+			} else if (optionEntered.equals("3")) {
+
+				System.out.println(
+						"The Robo Pets looked a bit sluggish. Thanks for the assist on helping them stay well lubricated.\n");
 
 			} else if (optionEntered.equals("4")) { // OPTION 4
 				System.out.println("\nWhich Shelter Pet would you like to play with today?");
@@ -107,7 +110,6 @@ public class VirtualPetShelterApp {
 				System.out.println("You've chosen to adopt a pet.");
 				System.out.println("Which pet would you like to adopt?\n");
 				System.out.println(pets.option5Display());
-				System.out.println(pets.option5Display());
 				String petName = input.nextLine();
 
 				// Dog Adoption
@@ -115,24 +117,25 @@ public class VirtualPetShelterApp {
 					System.out.println("This Dog does not exist.");
 				} else {
 					pets.adopt(petName);
-					System.out.println("Congrats on adopting your new Dog \n" + petName + "!");
+					System.out.println("Congrats on adopting your new Shelter baby: \n" + petName + "!");
 				}
 
-				// Cat Adoption
-				if (!pets.doesPetRemain(petName)) {
-					System.out.println("This Cat does not exit.");
-				} else {
-					pets.adopt(petName);
-					System.out.println(
-							"Congrats on adopting your new spawn of Satan, the Shelter means Cat \n" + petName + "!");
-				}
-
-				// RoboPet Adoption
-				// if (!robos.doesPetRemain(petName)) {
-				// System.out.println("This Dog does not exist.");
+				// // Cat Adoption
+				// if (!pets.doesPetRemain(petName)) {
+				// System.out.println("This Cat does not exit.");
 				// } else {
-				// robos.adopt(petName);
-				// System.out.println("Congrats on adopting your new RoboPet \n" + petName +
+				// pets.adopt(petName);
+				// System.out.println(
+				// "Congrats on adopting your new spawn of Satan, the Shelter means Cat \n" +
+				// petName + "!");
+				// }
+				//
+				// // RoboPet Adoption
+				// if (!pets.doesPetRemain(petName)) {
+				// System.out.println("This Robot Dog does not exist.");
+				// } else {
+				// pets.adopt(petName);
+				// System.out.println("Congrats on adopting your new Robot Dog \n" + petName +
 				// "!");
 				// }
 
@@ -162,21 +165,18 @@ public class VirtualPetShelterApp {
 					pets.add(new VirtualPet(newPetName, newPetDescription));
 					System.out.println("Your Cat will sure miss you.");
 					System.out.println("Thanks admitting your pet instead of discarding your Cat elsewhere...\n");
+
+				} else if (petDecision.equalsIgnoreCase("RoboPet")) { // ROBOPET Choice
+					System.out.println("Enter the name of the RoboPet that you aresurrendering.");
+					String newPetName = input.nextLine();
+
+					System.out.println("Enter a description for the RoboPet being surrendered: ");
+					String newPetDescription = input.nextLine();
+
+					pets.add(new RobotPet(newPetName, newPetDescription));
+					System.out.println("Your Robot Pet will sure miss you.");
+					System.out.println("Thanks admitting your pet instead of discarding your Robot Pet elsewhere...\n");
 				}
-				// else if (petDecision.equalsIgnoreCase("RoboPet")) { //ROBOPET Choice
-				// System.out.println("Enter the name of the RoboPet that you are
-				// surrendering.");
-				// String newPetName = input.nextLine();
-				//
-				// System.out.println("Enter a description for the RoboPet being surrendered:
-				// ");
-				// String newPetDescription = input.nextLine();
-				//
-				// robopets.add(new VirtualPet(newPetName, newPetDescription));
-				// System.out.println("Your Cat will sure miss you.");
-				// System.out.println("Thanks admitting your pet instead of discarding your Cat
-				// elsewhere...\n");
-				// }
 
 			} else if (optionEntered.equals("9")) { // OPTION 9
 				System.out.println("Are you sure you wish to quit the game?");

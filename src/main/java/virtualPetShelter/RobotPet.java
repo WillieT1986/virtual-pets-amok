@@ -30,4 +30,9 @@ public class RobotPet extends VirtualPet {
 		return happiness;
 	}
 
+	public void oilAll() {
+		this.oil += 5;
+		this.happiness += 10;
+	}
+
 }

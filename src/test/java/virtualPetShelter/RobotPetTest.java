@@ -56,4 +56,18 @@ public class RobotPetTest {
 		int check = underTest.getHappiness();
 		assertEquals(check, 35);
 	}
+
+	// @Test
+	// public void shouldShelterOilAllRoboPets() {
+	// RobotPet roboPet = new RobotPet(PET_NAME, PET_NAME);
+	// underTest.intake(roboPet);
+	// underTest.intake(new RobotPet("RoboPet2", "RoboPett2", 2, 0, 0));
+	// underTest.intake(new RobotPet("RoboPet3", "RoboPett3"));
+	// underTest.oilAll();
+	// RobotPet testRoboPet = underTest.findPet("RoboPet2");
+	// int oil = testRoboPet.getOil();
+	// assertEquals(10, oil);
+	// assertEquals(90, underTest.findPet("RobotPet2").getOil());
+	//
+	// }
 }
