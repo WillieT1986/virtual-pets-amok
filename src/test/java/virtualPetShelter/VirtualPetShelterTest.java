@@ -55,15 +55,15 @@ public class VirtualPetShelterTest {
 	// Feeding...?
 	@Test
 	public void shouldShelterFeedAllPet() {
-		VirtualPet pet = new VirtualPet("Hold", "Akita");// will be 52
+		VirtualPet pet = new VirtualPet("Hold", "Akita");
 		underTest.intake(pet);
-		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 0, 0, 0, 0)); // will be 2
-		underTest.intake(new VirtualPet("Hold3", "Akita3")); // will be 52
+		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 0, 0, 0, 0));
+		underTest.intake(new VirtualPet("Hold3", "Akita3"));
 		underTest.feedAll();
 		VirtualPet testPet = underTest.findPet("Hold2");
 		int hunger = testPet.getHunger();
 		// assertEquals("Hold2", testPet.getName()); //looks for specific pet
-		assertEquals(5, hunger); // This one will find the Hold2
+		assertEquals(5, hunger);
 		assertEquals(55, underTest.findPet("Hold3").getHunger()); // This one will
 		// find the Hold 3
 	}

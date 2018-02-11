@@ -163,8 +163,16 @@ public class VirtualPetShelterApp {
 
 				// OPTION 7
 			} else if (optionEntered.equals("7")) {
-				System.out.println("Enter something here...");
-				System.out.println("Under Construction...");
+				System.out.println("Would you like to clean the Dog Kennels?");
+				System.out.println("Yes or No");
+				String newDecision = input.nextLine();
+				if (newDecision.equalsIgnoreCase("Yes")) {
+					// INSERT DOG KENNEL CLEAN UP
+					System.out.println("Thanks for cleaning the Kennels!");
+				} else if (newDecision.equalsIgnoreCase("No")) {
+					System.out.println("Are you sure?");
+					System.out.println("Some of the Kennels look like they need it.");
+				}
 
 				// OPTION 8
 			} else if (optionEntered.equals("8")) {
