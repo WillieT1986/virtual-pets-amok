@@ -53,8 +53,8 @@ public class VirtualPetShelterApp {
 			System.out.println("Need to do something about the dog cages...\n");
 
 			System.out.println("\n\t\t    **CATS**\n");
-			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");
-			System.out.println("--------|-------|-------|--------|-------|---------");
+			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Happiness");
+			System.out.println("--------|-------|-------|--------|---------");
 			System.out.println(pets.catStatus());
 			System.out.println("Shelter recommends not letting the Litter Box go above 100.");
 			System.out.println("Nothing will happen of course. It just virtually stinks from time to time.\n");

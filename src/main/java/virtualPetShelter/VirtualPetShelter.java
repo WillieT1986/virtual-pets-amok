@@ -34,8 +34,7 @@ public class VirtualPetShelter {
 		for (VirtualPet eachPet : shelterPets.values())
 			if (eachPet instanceof Cat) {
 				catStatus += eachPet.getName() + "\t   " + eachPet.getHunger() + "\t   " + eachPet.getWater() + "\t   "
-						+ eachPet.getBoredom() + "\t    " + eachPet.getWaste() + "\t     " + eachPet.getHappiness()
-						+ "\n";
+						+ eachPet.getBoredom() + "\t     " + eachPet.getHappiness() + "\n";
 			}
 		return catStatus;
 	}
