@@ -16,9 +16,9 @@ public class RobotPet extends VirtualPet {
 
 	}
 
-	@Override
-	public int getHappiness() {
-		return happiness;
-	}
+	// @Override
+	// public int getHappiness() {
+	// return happiness;
+	// }
 
 }
