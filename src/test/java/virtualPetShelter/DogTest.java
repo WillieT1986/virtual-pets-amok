@@ -52,7 +52,7 @@ public class DogTest {
 	@Test
 	public void shouldReturnAFiltyDogKennel() {
 		int check = underTest.getFilthyDogKennel();
-		assertEquals(check, 0);
+		assertEquals(check, 50);
 	}
 
 	@Test

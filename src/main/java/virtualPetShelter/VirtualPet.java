@@ -10,7 +10,6 @@ public class VirtualPet implements Happiness {
 	private int happiness;
 	protected int oil;
 	protected int batteryLevel;
-	private int filthyDogKennel;
 
 	public VirtualPet(String name, String description) {
 		this(name, description, 50, 60, 70, 40, 30);
@@ -104,13 +103,13 @@ public class VirtualPet implements Happiness {
 	}
 
 	public int getFilthyDogKennel() {
-		return filthyDogKennel;
+		return waste;
 	}
 
 	public void cleanDogKennel() {
 		this.boredom += 5;
 		this.happiness += 5;
-		this.filthyDogKennel += 10;
+		this.waste = 0;
 	}
 
 }
