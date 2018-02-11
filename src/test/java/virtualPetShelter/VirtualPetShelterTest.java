@@ -72,13 +72,13 @@ public class VirtualPetShelterTest {
 	public void shouldShelterWaterAllPet() {
 		VirtualPet pet = new VirtualPet("Hold", "Akita");
 		underTest.intake(pet);
-		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 2, 0, 0, 0));
+		underTest.intake(new VirtualPet("Hold2", "Akita2", 0, 5, 0, 0, 0));
 		underTest.intake(new VirtualPet("Hold3", "Akita3"));
 		underTest.waterAll();
 		VirtualPet testPet = underTest.findPet("Hold2");
 		int water = testPet.getWater();
-		assertEquals(7, water);
-		assertEquals(65, underTest.findPet("Hold3").getWater());
+		assertEquals(11, water);
+		assertEquals(66, underTest.findPet("Hold3").getWater());
 	}
 
 	@Test
@@ -86,7 +86,7 @@ public class VirtualPetShelterTest {
 		VirtualPet pet = new VirtualPet("Hold", DESCRIPTION);
 		underTest.intake(pet);
 		underTest.play("Hold");
-		assertEquals(76, underTest.findPet("Hold").getBoredom());
+		assertEquals(64, underTest.findPet("Hold").getBoredom());
 	}
 
 	// Feeding...?
@@ -100,8 +100,8 @@ public class VirtualPetShelterTest {
 		VirtualPet testPet = (VirtualPet) underTest.findPet("Jax2");
 		int oil = testPet.getOil();
 		assertEquals("Jax2", testPet.getName()); // looks for specific pet
-		assertEquals(15, oil); // This one will find the Hold2
-		assertEquals(30, ((VirtualPet) underTest.findPet("Jax3")).getOil()); // This one will find the Hold 3
+		assertEquals(20, oil); // This one will find the Hold2
+		assertEquals(35, ((VirtualPet) underTest.findPet("Jax3")).getOil()); // This one will find the Hold 3
 	}
 
 }

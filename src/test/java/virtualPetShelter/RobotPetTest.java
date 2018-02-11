@@ -12,7 +12,7 @@ public class RobotPetTest {
 	private static final String DESCRIPTION = "description";
 	private static final int OIL = 30;
 	private static final int BATTERY_LEVEL = 40;
-	private static final int HAPPINESS = 35;
+	private static final int HAPPINESS = 30;
 
 	private VirtualPet underTest;
 
@@ -54,7 +54,7 @@ public class RobotPetTest {
 	@Test
 	public void shouldReturnHappiness() {
 		int check = underTest.getHappiness();
-		assertEquals(check, 35);
+		assertEquals(check, 30);
 	}
 
 }
