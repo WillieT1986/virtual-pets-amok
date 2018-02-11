@@ -65,9 +65,8 @@ public class VirtualPet implements Happiness {
 	}
 
 	public void waterPet() {
-		this.water += 5;
-		this.waste += 2;
-		this.happiness += 3;
+		this.water += 6;
+		this.waste += 1;
 	}
 
 	public void playPet() {
