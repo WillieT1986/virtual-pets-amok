@@ -76,14 +76,14 @@ public class VirtualPet implements Happiness {
 		this.happiness += 5;
 	}
 
-	public void tick() {
+	public int tick() {
 		this.hunger--;
 		this.water--;
 		this.boredom++;
 		this.waste++;
 		this.oil--;
 		this.batteryLevel--;
-		this.happiness--;
+		return this.happiness--;
 	}
 
 	@Override
