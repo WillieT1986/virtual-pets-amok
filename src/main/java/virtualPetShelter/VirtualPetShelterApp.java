@@ -163,6 +163,8 @@ public class VirtualPetShelterApp {
 
 				// OPTION 7
 			} else if (optionEntered.equals("7")) {
+				System.out.println("Enter something here...");
+				System.out.println("Under Construction...");
 
 				// OPTION 8
 			} else if (optionEntered.equals("8")) {
