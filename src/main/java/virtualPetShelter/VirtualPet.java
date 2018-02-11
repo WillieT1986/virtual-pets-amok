@@ -79,6 +79,8 @@ public class VirtualPet implements Happiness {
 		this.water--;
 		this.boredom--;
 		this.waste++;
+		this.oil--;
+		this.batteryLevel--;
 		this.happiness--;
 	}
 
