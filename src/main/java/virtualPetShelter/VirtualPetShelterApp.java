@@ -65,8 +65,8 @@ public class VirtualPetShelterApp {
 
 			System.out.println("1. Feed Organic Pets.");
 			System.out.println("2. Water Organic pets.");
-			System.out.println("3. Oil RoboPets.");
-			System.out.println("4. Play with pet.");
+			System.out.println("3. Oil Robot Dogs.");
+			System.out.println("4. Play with a Shelter Pet.");
 			System.out.println("5. Adopt a pet.");
 			System.out.println("6. Admit a pet.");
 			System.out.println("7. Clean all Dog cages. *Not yet implimented* -no functionality");
