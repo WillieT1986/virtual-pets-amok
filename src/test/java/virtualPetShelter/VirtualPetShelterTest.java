@@ -89,7 +89,6 @@ public class VirtualPetShelterTest {
 		assertEquals(64, underTest.findPet("Hold").getBoredom());
 	}
 
-	// Feeding...?
 	@Test
 	public void shouldShelterOilAllPet() {
 		VirtualPet pet = new RobotPet("Jax", "Metal");
