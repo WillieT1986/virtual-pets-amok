@@ -104,4 +104,23 @@ public class VirtualPetShelterTest {
 		assertEquals(35, ((VirtualPet) underTest.findPet("Jax3")).getOil()); // This one will find the Hold 3
 	}
 
+	@Test
+	public void shouldHaveShelterLitterBox() {
+		int check = underTest.getLitterBox();
+		assertEquals(check, 70);
+	}
+
+	@Test
+	public void shouldHaveShelterCleanLitterBox() {
+		underTest.litterBoxCleanUp();
+		assertEquals(underTest, underTest);
+	}
+
+	@Test
+	public void shouldTickLitterBox() {
+		int check = 5;
+		underTest.tickLitterBox();
+		assertEquals(check, 5);
+	}
+
 }
