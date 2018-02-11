@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class VirtualPetShelter {
-	private int litterBox = 25;
+	private int waste;
 
 	public Map<String, VirtualPet> shelterPets = new HashMap<>();
 
@@ -101,8 +101,12 @@ public class VirtualPetShelter {
 		return false;
 	}
 
+	public void getLitterBox() {
+		this.waste++;
+	}
+
 	public void litterBoxCleanUp() {
-		litterBox = 0;
+		waste = 0;
 	}
 
 	public void tickPets() {
@@ -111,7 +115,10 @@ public class VirtualPetShelter {
 		}
 	}
 
-	public int getLitterBox() {
-		return litterBox;
+	public void tickLitterBox() {
+		for (VirtualPet cat : shelterPets.values()) {
+			cat.tick();
+		}
 	}
+
 }
