@@ -79,7 +79,7 @@ public class VirtualPet implements Happiness {
 	public void tick() {
 		this.hunger--;
 		this.water--;
-		this.boredom--;
+		this.boredom++;
 		this.waste++;
 		this.oil--;
 		this.batteryLevel--;
