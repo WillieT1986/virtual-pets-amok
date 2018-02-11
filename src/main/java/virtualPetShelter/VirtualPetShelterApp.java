@@ -48,7 +48,7 @@ public class VirtualPetShelterApp {
 			System.out.println("This is the status of the Shelter Pet's: \n");
 
 			System.out.println("\t\t     **DOGS**\n");
-			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness"); // output in columns
+			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");
 			System.out.println("--------|-------|-------|--------|-------|---------");
 			System.out.println(pets.dogStatus());
 
