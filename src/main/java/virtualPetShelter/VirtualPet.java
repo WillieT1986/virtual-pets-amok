@@ -73,7 +73,7 @@ public class VirtualPet implements Happiness {
 		this.boredom -= 6;
 		this.oil -= 10;
 		this.batteryLevel -= 10;
-		this.happiness += 15;
+		this.happiness += 5;
 	}
 
 	public void tick() {
@@ -98,9 +98,8 @@ public class VirtualPet implements Happiness {
 
 	@Override
 	public void oilPet() {
-		this.oil += 5;
-		this.batteryLevel += 5;
-		this.happiness += 5;
+		this.oil += 10;
+		this.batteryLevel += 10;
 	}
 
 }
