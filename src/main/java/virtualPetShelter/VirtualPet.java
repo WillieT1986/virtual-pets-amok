@@ -108,7 +108,9 @@ public class VirtualPet implements Happiness {
 	}
 
 	public void cleanDogKennel() {
-
+		this.boredom += 5;
+		this.happiness += 5;
+		this.filthyDogKennel += 10;
 	}
 
 }
