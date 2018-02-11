@@ -122,7 +122,7 @@ public class VirtualPetShelterApp {
 					System.out.println("Enter a description for the Dog being surrendered: ");
 					String newPetDescription = input.nextLine();
 
-					pets.add(new Dog(newPetName, newPetDescription, 0, 0, 0, 0, 0));
+					pets.add(new Dog(newPetName, newPetDescription, 50, 50, 50, 50, 50));
 					System.out.println("Your Dog will sure miss you.");
 					System.out.println("Thanks admitting your Dog instead of discarding your Dog elsewhere...\n");
 				}
