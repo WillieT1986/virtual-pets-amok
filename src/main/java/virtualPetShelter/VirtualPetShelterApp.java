@@ -88,45 +88,14 @@ public class VirtualPetShelterApp {
 						"The Robo Pets looked a bit sluggish. Thanks for the assist on helping them stay well lubricated.\n");
 
 			} else if (optionEntered.equals("4")) { // OPTION 4
-				System.out.println("\nWhich Shelter Pet would you like to play with today?");
+				System.out.println("\nWhich Shelter Pet would you like to play with today? \n");
 				System.out.println("Just a reminder: ");
-				System.out.println("Taking out Robot Pets will drain lower their Oil Levels.");
-				System.out.println("It will also drain their Battery Levels. \n");
+				System.out.println("Playing with Robot Dogs decrease their Oil and Battery Levels. \n");
 				System.out.println(pets.option5Display());
 				String petName = input.nextLine();
+
 				pets.play(petName);
 				System.out.println("You took " + petName + " for a walk to the field to play.\n");
-
-				// System.out.println("Dogs? Cats? RoboPets?\n");
-				// String newDecision = input.nextLine();
-				// if (newDecision.equalsIgnoreCase("Dogs")) {
-				// System.out.println(pets.option5Display());
-				// String petName = input.nextLine();
-				// pets.play(petName);
-				// System.out.println("You took " + petName + " for a walk to the field to
-				// play.\n");
-				//
-				// } else if (newDecision.equalsIgnoreCase("Cats")) {
-				// System.out.println(pets.option5Display());
-				// String petName = input.nextLine();
-				// pets.play(petName);
-				// System.out.println(
-				// "Took" + petName + " for a walk. Said cat was lazy and rode on your shoulder
-				// instead.");
-				// }
-
-			} else if (optionEntered.equals("5")) { // OPTION 5
-				System.out.println("You've chosen to adopt a pet.");
-				System.out.println("Which pet would you like to adopt?\n");
-				System.out.println(pets.option5Display());
-				String petName = input.nextLine();
-
-				if (!pets.doesPetRemain(petName)) {
-					System.out.println("This Dog does not exist.");
-				} else {
-					pets.adopt(petName);
-					System.out.println("Congrats on adopting your new Shelter baby: \n" + petName + "!");
-				}
 
 			} else if (optionEntered.equals("6")) { // OPTION 6
 				System.out.println("What type of pet are your surrendering?");
