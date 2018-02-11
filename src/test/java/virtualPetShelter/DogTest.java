@@ -48,4 +48,10 @@ public class DogTest {
 		int check = underTest.getHappiness();
 		assertEquals(check, 40);
 	}
+
+	@Test
+	public void shouldReturnAFiltyDogKennel() {
+		int check = underTest.getFilthyDogKennel();
+		assertEquals(check, 0);
+	}
 }
