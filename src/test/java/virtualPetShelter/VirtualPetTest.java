@@ -73,5 +73,4 @@ public class VirtualPetTest {
 		int check = underTest.getHappiness();
 		assertEquals(check, 30);
 	}
-
 }

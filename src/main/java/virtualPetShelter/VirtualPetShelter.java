@@ -123,4 +123,12 @@ public class VirtualPetShelter {
 			}
 		}
 	}
+
+	public void cleanDogKennels() {
+		for (VirtualPet dog : shelterPets.values()) {
+			if (dog instanceof Dog) {
+				((Dog) dog).cleanKennel();
+			}
+		}
+	}
 }

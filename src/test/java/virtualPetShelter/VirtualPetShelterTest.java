@@ -86,7 +86,7 @@ public class VirtualPetShelterTest {
 		VirtualPet pet = new VirtualPet("Hold", DESCRIPTION);
 		underTest.intake(pet);
 		underTest.play("Hold");
-		assertEquals(64, underTest.findPet("Hold").getBoredom());
+		assertEquals(50, underTest.findPet("Hold").getBoredom());
 	}
 
 	@Test
@@ -120,6 +120,12 @@ public class VirtualPetShelterTest {
 		int check = 5;
 		underTest.tickLitterBox();
 		assertEquals(check, 5);
+	}
+
+	@Test
+	public void shouldCleanDogKennels() {
+		underTest.cleanDogKennels();
+		assertEquals(5, underTest);
 	}
 
 }

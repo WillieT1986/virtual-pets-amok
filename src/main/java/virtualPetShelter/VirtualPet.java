@@ -71,8 +71,8 @@ public class VirtualPet implements Happiness {
 
 	public void playPet() {
 		this.boredom -= 20;
-		this.oil -= 10;
-		this.batteryLevel -= 10;
+		this.oil -= 5;
+		this.batteryLevel -= 5;
 		this.happiness += 5;
 	}
 
