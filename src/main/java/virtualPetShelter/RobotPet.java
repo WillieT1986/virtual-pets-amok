@@ -13,12 +13,5 @@ public class RobotPet extends VirtualPet {
 		this.oil = oil;
 		this.batteryLevel = batteryLevel;
 		this.happiness = happiness;
-
 	}
-
-	// @Override
-	// public int getHappiness() {
-	// return happiness;
-	// }
-
 }
