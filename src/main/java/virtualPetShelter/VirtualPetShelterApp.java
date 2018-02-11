@@ -57,7 +57,7 @@ public class VirtualPetShelterApp {
 			System.out.println("--------|-------|-------|--------|-------|---------");
 			System.out.println(pets.catStatus());
 			System.out.println("Shelter recommends not letting the Litter Box go above 100.");
-			System.out.println("Nothing will happen of course. It just stinks from time to time.\n");
+			System.out.println("Nothing will happen of course. It just virtually stinks from time to time.\n");
 			System.out.println("Shelter Litter Box Level: " + pets.getLitterBox() + "\n");
 
 			System.out.println("\n\t    **ROBO DOGS**\n");
