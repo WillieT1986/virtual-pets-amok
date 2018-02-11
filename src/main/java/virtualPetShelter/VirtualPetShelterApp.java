@@ -97,6 +97,19 @@ public class VirtualPetShelterApp {
 				pets.play(petName);
 				System.out.println("You took " + petName + " for a walk to the field to play.\n");
 
+			} else if (optionEntered.equals("5")) { // OPTION 5
+				System.out.println("You've chosen to adopt a pet.");
+				System.out.println("Which pet would you like to adopt?\n");
+				System.out.println(pets.option5Display());
+				String petName = input.nextLine();
+
+				if (!pets.doesPetRemain(petName)) {
+					System.out.println("This Dog does not exist.");
+				} else {
+					pets.adopt(petName);
+					System.out.println("Congrats on adopting your new Shelter baby: \n" + petName + "!");
+				}
+
 			} else if (optionEntered.equals("6")) { // OPTION 6
 				System.out.println("What type of pet are your surrendering?");
 				System.out.println("Dog? Cat? RoboPet?");
@@ -152,7 +165,6 @@ public class VirtualPetShelterApp {
 
 			}
 			pets.tickPets();
-
 		} // end while loop
 
 		input.close();
