@@ -13,12 +13,6 @@ public class VirtualPetShelter {
 		return shelterPets.values();
 	}
 
-	// Return specific Virtual Pet given its name
-	public void intake(VirtualPet virtualPet) {
-		String newName = virtualPet.getName();
-		shelterPets.put(newName, virtualPet);
-	}
-
 	public VirtualPet findPet(String petName) {
 		return shelterPets.get(petName);
 	}
@@ -30,6 +24,12 @@ public class VirtualPetShelter {
 
 	public boolean doesPetRemain(String name) {
 		return shelterPets.containsKey(name);
+	}
+
+	// Return specific Virtual Pet given its name
+	public void intake(VirtualPet virtualPet) {
+		String newName = virtualPet.getName();
+		shelterPets.put(newName, virtualPet);
 	}
 
 	public void feedAll() {
