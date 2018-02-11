@@ -107,4 +107,8 @@ public class VirtualPet implements Happiness {
 		return filthyDogKennel;
 	}
 
+	public void cleanDogKennel() {
+
+	}
+
 }

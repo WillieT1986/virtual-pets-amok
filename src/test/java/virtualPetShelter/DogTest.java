@@ -54,4 +54,10 @@ public class DogTest {
 		int check = underTest.getFilthyDogKennel();
 		assertEquals(check, 0);
 	}
+
+	@Test
+	public void shouldTidyUpDogKennel() {
+		underTest.cleanDogKennel();
+
+	}
 }
