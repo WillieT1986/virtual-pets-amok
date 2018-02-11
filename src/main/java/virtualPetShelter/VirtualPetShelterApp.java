@@ -83,7 +83,7 @@ public class VirtualPetShelterApp {
 				System.out.println("You gave all the Dog's & Cat's in the Shelter water.\n");
 
 			} else if (optionEntered.equals("3")) {
-
+				pets.oilAll();
 				System.out.println(
 						"The Robo Pets looked a bit sluggish. Thanks for the assist on helping them stay well lubricated.\n");
 
@@ -112,32 +112,12 @@ public class VirtualPetShelterApp {
 				System.out.println(pets.option5Display());
 				String petName = input.nextLine();
 
-				// Dog Adoption
 				if (!pets.doesPetRemain(petName)) {
 					System.out.println("This Dog does not exist.");
 				} else {
 					pets.adopt(petName);
 					System.out.println("Congrats on adopting your new Shelter baby: \n" + petName + "!");
 				}
-
-				// // Cat Adoption
-				// if (!pets.doesPetRemain(petName)) {
-				// System.out.println("This Cat does not exit.");
-				// } else {
-				// pets.adopt(petName);
-				// System.out.println(
-				// "Congrats on adopting your new spawn of Satan, the Shelter means Cat \n" +
-				// petName + "!");
-				// }
-				//
-				// // RoboPet Adoption
-				// if (!pets.doesPetRemain(petName)) {
-				// System.out.println("This Robot Dog does not exist.");
-				// } else {
-				// pets.adopt(petName);
-				// System.out.println("Congrats on adopting your new Robot Dog \n" + petName +
-				// "!");
-				// }
 
 			} else if (optionEntered.equals("6")) { // OPTION 6
 				System.out.println("What type of pet are your surrendering?");
@@ -199,5 +179,4 @@ public class VirtualPetShelterApp {
 
 		input.close();
 	}
-
 }

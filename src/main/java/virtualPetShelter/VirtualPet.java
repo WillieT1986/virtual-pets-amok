@@ -8,13 +8,14 @@ public class VirtualPet implements Happiness {
 	private int boredom;
 	private int waste;
 	private int happiness;
+	protected int oil;
+	protected int batteryLevel;
 
-	// Constructor used for name & description of Virtual Pets
 	public VirtualPet(String name, String description) {
 		this(name, description, 50, 60, 70, 40, 30);
 	}
 
-	// Constructor used for Organic Virtual Pets
+	// Constructor used for Virtual Pets
 	public VirtualPet(String name, String description, int hunger, int water, int boredom, int waste, int happiness) {
 		this.name = name;
 		this.description = description;
@@ -49,6 +50,14 @@ public class VirtualPet implements Happiness {
 		return waste;
 	}
 
+	public int getOil() {
+		return oil;
+	}
+
+	public int getBatteryLevel() {
+		return batteryLevel;
+	}
+
 	public void feedPet() {
 		this.hunger += 5;
 		this.water -= 5;
@@ -77,6 +86,11 @@ public class VirtualPet implements Happiness {
 	@Override
 	public String toString() {
 		return name;
+	}
+
+	@Override
+	public void oilPet() {
+		this.oil += 5;
 	}
 
 }

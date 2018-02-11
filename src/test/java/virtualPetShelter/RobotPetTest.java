@@ -14,7 +14,7 @@ public class RobotPetTest {
 	private static final int BATTERY_LEVEL = 40;
 	private static final int HAPPINESS = 35;
 
-	private RobotPet underTest;
+	private VirtualPet underTest;
 
 	@Before
 	public void setup() {
@@ -57,17 +57,4 @@ public class RobotPetTest {
 		assertEquals(check, 35);
 	}
 
-	// @Test
-	// public void shouldShelterOilAllRoboPets() {
-	// RobotPet roboPet = new RobotPet(PET_NAME, PET_NAME);
-	// underTest.intake(roboPet);
-	// underTest.intake(new RobotPet("RoboPet2", "RoboPett2", 2, 0, 0));
-	// underTest.intake(new RobotPet("RoboPet3", "RoboPett3"));
-	// underTest.oilAll();
-	// RobotPet testRoboPet = underTest.findPet("RoboPet2");
-	// int oil = testRoboPet.getOil();
-	// assertEquals(10, oil);
-	// assertEquals(90, underTest.findPet("RobotPet2").getOil());
-	//
-	// }
 }

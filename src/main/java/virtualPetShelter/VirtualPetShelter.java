@@ -44,6 +44,12 @@ public class VirtualPetShelter {
 		}
 	}
 
+	public void oilAll() {
+		for (Happiness pet : shelterPets.values()) {
+			pet.oilPet();
+		}
+	}
+
 	public void play(String name) {
 		shelterPets.get(name).playPet();
 	}
@@ -76,7 +82,7 @@ public class VirtualPetShelter {
 
 	public String roboStatus() {
 		String roboStatus = "";
-		for (VirtualPet eachPet : shelterPets.values())
+		for (Happiness eachPet : shelterPets.values())
 			if (eachPet instanceof RobotDog) {
 				RobotDog dog = (RobotDog) eachPet;
 				roboStatus += dog.getName() + "\t   " + dog.getOil() + "\t    " + dog.getBatteryLevel() + "\t     "

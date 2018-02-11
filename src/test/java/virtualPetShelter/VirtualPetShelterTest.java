@@ -89,18 +89,19 @@ public class VirtualPetShelterTest {
 		assertEquals(76, underTest.findPet("Hold").getBoredom());
 	}
 
+	// Feeding...?
 	@Test
-	public void shouldIntakeMultipleRobotPetNames() {
-		String anotherName = "Metal";
-		RobotPet pet = new RobotPet("Jax", DESCRIPTION);
-		RobotPet anotherPet = new RobotPet(anotherName, DESCRIPTION);
+	public void shouldShelterOilAllPet() {
+		VirtualPet pet = new RobotPet("Jax", "Metal");
 		underTest.intake(pet);
-		underTest.intake(anotherPet);
-		Collection<VirtualPet> pets = underTest.pets();
-		assertThat(pets, containsInAnyOrder(pet, anotherPet));
-		assertTrue(pets.contains(pet));
-		assertTrue(pets.contains(anotherPet));
-		assertEquals(2, pets.size());
+		underTest.intake(new RobotPet("Jax2", "Metal2", 10, 0, 0));
+		underTest.intake(new RobotPet("Jax3", "Metal3", 25, 0, 0));
+		underTest.oilAll();
+		VirtualPet testPet = (VirtualPet) underTest.findPet("Jax2");
+		int oil = testPet.getOil();
+		assertEquals("Jax2", testPet.getName()); // looks for specific pet
+		assertEquals(15, oil); // This one will find the Hold2
+		assertEquals(30, ((VirtualPet) underTest.findPet("Jax3")).getOil()); // This one will find the Hold 3
 	}
 
 }
