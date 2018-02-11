@@ -70,7 +70,7 @@ public class VirtualPet implements Happiness {
 	}
 
 	public void playPet() {
-		this.boredom -= 6;
+		this.boredom -= 20;
 		this.oil -= 10;
 		this.batteryLevel -= 10;
 		this.happiness += 5;
@@ -106,7 +106,7 @@ public class VirtualPet implements Happiness {
 		return waste;
 	}
 
-	public void cleanDogKennel() {
+	public void cleanKennel() {
 		this.boredom += 5;
 		this.happiness += 5;
 		this.waste = 0;

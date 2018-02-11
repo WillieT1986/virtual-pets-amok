@@ -57,7 +57,7 @@ public class DogTest {
 
 	@Test
 	public void shouldTidyUpDogKennel() {
-		underTest.cleanDogKennel();
+		underTest.cleanKennel();
 
 	}
 }
