@@ -112,7 +112,7 @@ public class VirtualPetShelterApp {
 
 			} else if (optionEntered.equals("6")) { // OPTION 6
 				System.out.println("What type of pet are your surrendering?\n");
-				System.out.println("Dog? Cat? RoboPet?");
+				System.out.println("Dog? Cat? Robot Dog?");
 				String petDecision = input.nextLine();
 
 				if (petDecision.equalsIgnoreCase("Dog")) { // DOG Choice
@@ -137,20 +137,17 @@ public class VirtualPetShelterApp {
 					System.out.println("Your Cat will sure miss you.");
 					System.out.println("Thanks admitting your pet instead of discarding your Cat elsewhere...\n");
 
-				} // else if (petDecision.equalsIgnoreCase("RoboPet")) { // ROBOPET Choice
-					// System.out.println("Enter the name of the RoboPet that you
-					// aresurrendering.");
-					// String newPetName = input.nextLine();
-					//
-					// System.out.println("Enter a description for the RoboPet being surrendered:
-					// ");
-					// String newPetDescription = input.nextLine();
-					//
-					// pets.add(new RobotPet(newPetName, newPetDescription));
-					// System.out.println("Your Robot Pet will sure miss you.");
-					// System.out.println("Thanks admitting your pet instead of discarding your
-					// Robot Pet elsewhere...\n");
-					// }
+				} else if (petDecision.equalsIgnoreCase("Robot Dog")) { // ROBOPET Choice
+					System.out.println("Enter the name of the RoboPet that you are surrendering.");
+					String newPetName = input.nextLine();
+
+					System.out.println("Enter a description for the RoboPet being surrendered: ");
+					String newPetDescription = input.nextLine();
+
+					pets.add(new RobotDog(newPetName, newPetDescription, 50, 50, 50));
+					System.out.println("Your Robot Pet will sure miss you.");
+					System.out.println("Thanks admitting your pet instead of discarding your Robot Pet elsewhere...\n");
+				}
 
 			} else if (optionEntered.equals("9")) { // OPTION 9
 				System.out.println("Are you sure you wish to quit the game?");
