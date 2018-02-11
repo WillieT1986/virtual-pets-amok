@@ -108,14 +108,15 @@ public class VirtualPetShelterApp {
 				} else {
 					pets.adopt(petName);
 					System.out.println("Congrats on adopting your new Shelter baby: \n" + petName + "!");
-				}
+				} // End of Option 5 If Else Statment's
 
-			} else if (optionEntered.equals("6")) { // OPTION 6
+			} else if (optionEntered.equals("6")) { // Option 6
 				System.out.println("What type of pet are your surrendering?\n");
 				System.out.println("Dog? Cat? Robot Dog?");
 				String petDecision = input.nextLine();
 
-				if (petDecision.equalsIgnoreCase("Dog")) { // DOG Choice
+				// DOG Choice
+				if (petDecision.equalsIgnoreCase("Dog")) {
 					System.out.println("Enter the name of the Dog being surrendered: ");
 					String newPetName = input.nextLine();
 
@@ -126,7 +127,8 @@ public class VirtualPetShelterApp {
 					System.out.println("Your Dog will sure miss you.");
 					System.out.println("Thanks admitting your Dog instead of discarding your Dog elsewhere...\n");
 
-				} else if (petDecision.equalsIgnoreCase("Cat")) { // CAT Choice
+					// CAT Choice
+				} else if (petDecision.equalsIgnoreCase("Cat")) {
 					System.out.println("Enter the name of the Cat being surrendered: ");
 					String newPetName = input.nextLine();
 
@@ -137,17 +139,18 @@ public class VirtualPetShelterApp {
 					System.out.println("Your Cat will sure miss you.");
 					System.out.println("Thanks admitting your pet instead of discarding your Cat elsewhere...\n");
 
-				} else if (petDecision.equalsIgnoreCase("Robot Dog")) { // ROBOPET Choice
-					System.out.println("Enter the name of the RoboPet that you are surrendering.");
+					// ROBOT DOG Choice
+				} else if (petDecision.equalsIgnoreCase("Robot Dog")) {
+					System.out.println("Enter the name of the Robot Dog that you are surrendering.");
 					String newPetName = input.nextLine();
 
-					System.out.println("Enter a description for the RoboPet being surrendered: ");
+					System.out.println("Enter a description for the Robot Dog being surrendered: ");
 					String newPetDescription = input.nextLine();
 
 					pets.add(new RobotDog(newPetName, newPetDescription, 50, 50, 50));
 					System.out.println("Your Robot Pet will sure miss you.");
 					System.out.println("Thanks admitting your pet instead of discarding your Robot Pet elsewhere...\n");
-				}
+				} // End of Option 6 If Else Statment's
 
 			} else if (optionEntered.equals("9")) { // OPTION 9
 				System.out.println("Are you sure you wish to quit the game?");
@@ -161,7 +164,7 @@ public class VirtualPetShelterApp {
 					decision.equalsIgnoreCase("No");
 					System.out.println("Glad you are still with us.");
 					System.out.println("The pets will be pleased that you stayed for a while longer.\n");
-				}
+				} // End of Option 9 If Else Statment's
 
 			}
 			pets.tickPets();
