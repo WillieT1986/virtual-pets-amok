@@ -65,7 +65,7 @@ public class VirtualPetShelterApp {
 
 			System.out.println("1. Feed Organic Pets.");
 			System.out.println("2. Water Organic pets.");
-			System.out.println("3. Oil RoboPets.  *Not yet implimented* -no functionality");
+			System.out.println("3. Oil RoboPets.");
 			System.out.println("4. Play with pet.");
 			System.out.println("5. Adopt a pet.");
 			System.out.println("6. Admit a pet.");
@@ -89,22 +89,31 @@ public class VirtualPetShelterApp {
 
 			} else if (optionEntered.equals("4")) { // OPTION 4
 				System.out.println("\nWhich Shelter Pet would you like to play with today?");
-				System.out.println("Dogs? Cats? RoboPets?\n");
-				String newDecision = input.nextLine();
+				System.out.println("Just a reminder: ");
+				System.out.println("Taking out Robot Pets will drain lower their Oil Levels.");
+				System.out.println("It will also drain their Battery Levels. \n");
+				System.out.println(pets.option5Display());
+				String petName = input.nextLine();
+				pets.play(petName);
+				System.out.println("You took " + petName + " for a walk to the field to play.\n");
 
-				if (newDecision.equalsIgnoreCase("Dogs")) {
-					System.out.println(pets.option5Display());
-					String petName = input.nextLine();
-					pets.play(petName);
-					System.out.println("You took " + petName + " for a walk to the field to play.\n");
-
-				} else if (newDecision.equalsIgnoreCase("Cats")) {
-					System.out.println(pets.option5Display());
-					String petName = input.nextLine();
-					pets.play(petName);
-					System.out.println(
-							"Took" + petName + " for a walk. Said cat was lazy and rode on your shoulder instead.");
-				}
+				// System.out.println("Dogs? Cats? RoboPets?\n");
+				// String newDecision = input.nextLine();
+				// if (newDecision.equalsIgnoreCase("Dogs")) {
+				// System.out.println(pets.option5Display());
+				// String petName = input.nextLine();
+				// pets.play(petName);
+				// System.out.println("You took " + petName + " for a walk to the field to
+				// play.\n");
+				//
+				// } else if (newDecision.equalsIgnoreCase("Cats")) {
+				// System.out.println(pets.option5Display());
+				// String petName = input.nextLine();
+				// pets.play(petName);
+				// System.out.println(
+				// "Took" + petName + " for a walk. Said cat was lazy and rode on your shoulder
+				// instead.");
+				// }
 
 			} else if (optionEntered.equals("5")) { // OPTION 5
 				System.out.println("You've chosen to adopt a pet.");
