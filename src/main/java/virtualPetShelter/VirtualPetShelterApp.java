@@ -61,7 +61,7 @@ public class VirtualPetShelterApp {
 			System.out.println("Name\t|Oil\t|Battery |Happiness");
 			System.out.println("--------|-------|--------|---------");
 			System.out.println(pets.roboStatus());
-			System.out.println("Shelter Litter Box Level: \n");
+			// System.out.println("Shelter Litter Box Level: \n" + getLitterBoxLevels());
 			System.out.println("\nWhat would you like to do next?\n");
 
 			System.out.println("1. Feed Dogs & Cats.");
@@ -152,6 +152,18 @@ public class VirtualPetShelterApp {
 					System.out.println("Your Robot Pet will sure miss you.");
 					System.out.println("Thanks admitting your pet instead of discarding your Robot Pet elsewhere...\n");
 				} // End of Option 6 If Else Statment's
+
+			} else if (optionEntered.equals("8")) { // OPTION 8
+				System.out.println("Would you like to clean the Shelter Litter Box now?");
+				System.out.println("Yes or No");
+				String newDecision = input.nextLine();
+				if (newDecision.equalsIgnoreCase("Yes")) {
+					System.out.println("That litter box really needed it.");
+					System.out.println("Thank you.\n");
+				} else if (newDecision.equalsIgnoreCase("No")) {
+					System.out.println("Are you sure? Are you really sure?");
+					System.out.println("It seems to be getting full...\n");
+				}
 
 			} else if (optionEntered.equals("9")) { // OPTION 9
 				System.out.println("Are you sure you wish to quit the game?");

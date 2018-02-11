@@ -10,6 +10,7 @@ public class VirtualPet implements Happiness {
 	private int happiness;
 	protected int oil;
 	protected int batteryLevel;
+	private int shelterLitterBoxLevels;
 
 	public VirtualPet(String name, String description) {
 		this(name, description, 50, 60, 70, 40, 30);

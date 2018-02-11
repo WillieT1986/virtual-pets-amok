@@ -19,4 +19,16 @@ public class LitterBoxTest {
 		assertNotNull(underTest);
 	}
 
+	@Test
+	public void shouldGetLitterBoxLevel() {
+		underTest.getLitterBoxLevel();
+	}
+
+	// @Test
+	// public void shouldAddWasteToLitterBox() {
+	// VirtualPet underTest = new VirtualPet("name", "description", 0, 0, 0, 1, 0);
+	// int check = underTest.getWaste();
+	// assertEquals(1, check);
+	// }
+
 }
