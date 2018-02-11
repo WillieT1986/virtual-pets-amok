@@ -61,10 +61,14 @@ public class VirtualPet implements Happiness {
 	public void feedPet() {
 		this.hunger += 5;
 		this.water -= 5;
+		this.waste += 2;
+		this.happiness += 3;
 	}
 
 	public void waterPet() {
 		this.water += 5;
+		this.waste += 2;
+		this.happiness += 3;
 	}
 
 	public void playPet() {
@@ -97,6 +101,8 @@ public class VirtualPet implements Happiness {
 	@Override
 	public void oilPet() {
 		this.oil += 5;
+		this.batteryLevel += 5;
+		this.happiness += 5;
 	}
 
 }

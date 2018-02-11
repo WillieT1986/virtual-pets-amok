@@ -63,9 +63,9 @@ public class VirtualPetShelterApp {
 			System.out.println(pets.roboStatus());
 			System.out.println("\nWhat would you like to do next?\n");
 
-			System.out.println("1. Feed Organic Pets.");
-			System.out.println("2. Water Organic pets.");
-			System.out.println("3. Oil Robot Dogs.");
+			System.out.println("1. Feed Dogs & Cats.");
+			System.out.println("2. Water Dogs & Cats.");
+			System.out.println("3. Oil & Charge Robot Dogs.");
 			System.out.println("4. Play with a Shelter Pet.");
 			System.out.println("5. Adopt a pet.");
 			System.out.println("6. Admit a pet.");

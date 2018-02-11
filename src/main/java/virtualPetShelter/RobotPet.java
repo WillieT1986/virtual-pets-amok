@@ -16,11 +16,6 @@ public class RobotPet extends VirtualPet {
 
 	}
 
-	public void oilAll() {
-		this.oil += 5;
-		this.happiness += 10;
-	}
-
 	@Override
 	public int getHappiness() {
 		return happiness;
