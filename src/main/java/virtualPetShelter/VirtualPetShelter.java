@@ -100,16 +100,9 @@ public class VirtualPetShelter {
 		return option5Display;
 	}
 
-	public void tickDogs() {
+	public void tickPets() {
 		for (VirtualPet pet : shelterPets.values()) {
 			pet.tick();
 		}
 	}
-
-	public void tickCats() {
-		for (VirtualPet pet : shelterPets.values()) {
-			pet.tick();
-		}
-	}
-
 }

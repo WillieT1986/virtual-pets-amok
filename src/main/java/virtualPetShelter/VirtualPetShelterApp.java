@@ -82,10 +82,10 @@ public class VirtualPetShelterApp {
 				pets.waterAll();
 				System.out.println("You gave all the Dog's & Cat's in the Shelter water.\n");
 
-			} else if (optionEntered.equals("3")) {
+			} else if (optionEntered.equals("3")) { // OPTION 3
 				pets.oilAll();
-				System.out.println(
-						"The Robo Pets looked a bit sluggish. Thanks for the assist on helping them stay well lubricated.\n");
+				System.out.println("The Robo Pets looked a bit sluggish.");
+				System.out.println("Thanks for the assist on helping them stay well lubricated.\n");
 
 			} else if (optionEntered.equals("4")) { // OPTION 4
 				System.out.println("\nWhich Shelter Pet would you like to play with today? \n");
@@ -151,8 +151,8 @@ public class VirtualPetShelterApp {
 				}
 
 			}
-			pets.tickDogs();
-			pets.tickCats();
+			pets.tickPets();
+
 		} // end while loop
 
 		input.close();
