@@ -74,4 +74,11 @@ public class VirtualPetTest {
 		assertEquals(check, 30);
 	}
 
+	@Test
+	public void shouldReturnLitterBox() {
+		Happiness underTest = new VirtualPet(null, null, 0, 0, 0, 0, 0);
+		int check = underTest.getLitterBox();
+		assertEquals(check, 25);
+	}
+
 }

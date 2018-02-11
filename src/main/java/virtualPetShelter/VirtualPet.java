@@ -10,6 +10,7 @@ public class VirtualPet implements Happiness {
 	private int happiness;
 	protected int oil;
 	protected int batteryLevel;
+	private int litterBox = 25;
 
 	public VirtualPet(String name, String description) {
 		this(name, description, 50, 60, 70, 40, 30);
@@ -100,6 +101,11 @@ public class VirtualPet implements Happiness {
 	public void oilPet() {
 		this.oil += 10;
 		this.batteryLevel += 10;
+	}
+
+	@Override
+	public int getLitterBox() {
+		return litterBox;
 	}
 
 }

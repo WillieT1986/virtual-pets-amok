@@ -56,12 +56,12 @@ public class VirtualPetShelterApp {
 			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");
 			System.out.println("--------|-------|-------|--------|-------|---------");
 			System.out.println(pets.catStatus());
+			System.out.println("Shelter Litter Box Level: \n" + pets.getLitterBox());
 
 			System.out.println("\t    **ROBO DOGS**\n");
 			System.out.println("Name\t|Oil\t|Battery |Happiness");
 			System.out.println("--------|-------|--------|---------");
 			System.out.println(pets.roboStatus());
-			// System.out.println("Shelter Litter Box Level: \n" + getLitterBoxLevels());
 			System.out.println("\nWhat would you like to do next?\n");
 
 			System.out.println("1. Feed Dogs & Cats.");
@@ -158,6 +158,7 @@ public class VirtualPetShelterApp {
 				System.out.println("Yes or No");
 				String newDecision = input.nextLine();
 				if (newDecision.equalsIgnoreCase("Yes")) {
+					pets.litterBoxCleanUp();
 					System.out.println("That litter box really needed it.");
 					System.out.println("Thank you.\n");
 				} else if (newDecision.equalsIgnoreCase("No")) {

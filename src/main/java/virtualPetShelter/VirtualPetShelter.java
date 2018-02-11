@@ -6,52 +6,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class VirtualPetShelter {
+	private int litterBox = 25;
 
 	public Map<String, VirtualPet> shelterPets = new HashMap<>();
 
 	public Collection<VirtualPet> pets() {
 		return shelterPets.values();
-	}
-
-	public VirtualPet findPet(String petName) {
-		return shelterPets.get(petName);
-	}
-
-	public boolean adopt(String name) {
-		shelterPets.remove(name);
-		return false;
-	}
-
-	public boolean doesPetRemain(String name) {
-		return shelterPets.containsKey(name);
-	}
-
-	// Return specific Virtual Pet given its name
-	public void intake(VirtualPet virtualPet) {
-		String newName = virtualPet.getName();
-		shelterPets.put(newName, virtualPet);
-	}
-
-	public void feedAll() {
-		for (VirtualPet pet : shelterPets.values()) {
-			pet.feedPet();
-		}
-	}
-
-	public void waterAll() {
-		for (VirtualPet pet : shelterPets.values()) {
-			pet.waterPet();
-		}
-	}
-
-	public void oilAll() {
-		for (Happiness pet : shelterPets.values()) {
-			pet.oilPet();
-		}
-	}
-
-	public void play(String name) {
-		shelterPets.get(name).playPet();
 	}
 
 	public void add(VirtualPet pet) {
@@ -91,6 +51,38 @@ public class VirtualPetShelter {
 		return roboStatus;
 	}
 
+	public VirtualPet findPet(String petName) {
+		return shelterPets.get(petName);
+	}
+
+	// Return specific Virtual Pet given its name
+	public void intake(VirtualPet virtualPet) {
+		String newName = virtualPet.getName();
+		shelterPets.put(newName, virtualPet);
+	}
+
+	public void feedAll() {
+		for (VirtualPet pet : shelterPets.values()) {
+			pet.feedPet();
+		}
+	}
+
+	public void waterAll() {
+		for (VirtualPet pet : shelterPets.values()) {
+			pet.waterPet();
+		}
+	}
+
+	public void oilAll() {
+		for (Happiness pet : shelterPets.values()) {
+			pet.oilPet();
+		}
+	}
+
+	public void play(String name) {
+		shelterPets.get(name).playPet();
+	}
+
 	public String option5Display() {
 		String option5Display = "";
 		for (Entry<String, VirtualPet> eachPet : shelterPets.entrySet()) {
@@ -100,9 +92,26 @@ public class VirtualPetShelter {
 		return option5Display;
 	}
 
+	public boolean doesPetRemain(String name) {
+		return shelterPets.containsKey(name);
+	}
+
+	public boolean adopt(String name) {
+		shelterPets.remove(name);
+		return false;
+	}
+
+	public void litterBoxCleanUp() {
+		litterBox = 0;
+	}
+
 	public void tickPets() {
 		for (VirtualPet pet : shelterPets.values()) {
 			pet.tick();
 		}
+	}
+
+	public int getLitterBox() {
+		return litterBox;
 	}
 }
