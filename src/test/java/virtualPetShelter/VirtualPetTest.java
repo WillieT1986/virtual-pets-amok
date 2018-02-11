@@ -74,4 +74,9 @@ public class VirtualPetTest {
 		assertEquals(check, 30);
 	}
 
+	// @Test
+	// public void shouldCreateShelterLitterBoxForCats() {
+	// VirtualPet underTest = new VirtualPet();
+	// }
+
 }

@@ -61,6 +61,7 @@ public class VirtualPetShelterApp {
 			System.out.println("Name\t|Oil\t|Battery |Happiness");
 			System.out.println("--------|-------|--------|---------");
 			System.out.println(pets.roboStatus());
+			System.out.println("Shelter Litter Box Level: \n");
 			System.out.println("\nWhat would you like to do next?\n");
 
 			System.out.println("1. Feed Dogs & Cats.");
