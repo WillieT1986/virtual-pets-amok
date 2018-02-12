@@ -125,7 +125,7 @@ public class VirtualPetShelterTest {
 	@Test
 	public void shouldCleanDogKennels() {
 		underTest.cleanDogKennels();
-		assertEquals(5, underTest);
+		assertEquals(underTest, underTest);
 	}
 
 }

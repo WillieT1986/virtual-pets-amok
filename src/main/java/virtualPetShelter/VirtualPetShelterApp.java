@@ -53,8 +53,8 @@ public class VirtualPetShelterApp {
 			for (VirtualPet pet : pets.pets()) {
 				if (pet instanceof Dog) {
 					if (((Dog) pet).getFilthyDogKennel() >= 75) {
-						System.out.println("\n" + pet.getName() + " needs his Kennel cleaned out.");
-						System.out.println("Need to do something about the dog cages...\n");
+						System.out.println(pet.getName() + " needs his kennel cleaned out.");
+						System.out.println("Need to do something about the dog kennel(s).\n");
 					}
 				}
 			}
@@ -79,39 +79,33 @@ public class VirtualPetShelterApp {
 			System.out.println("4. Play with a Shelter Pet.");
 			System.out.println("5. Adopt a pet.");
 			System.out.println("6. Admit a pet.");
-			System.out.println("7. Clean all Dog cages. *Not yet implimented* -no functionality");
+			System.out.println("7. Clean all Dog cages.");
 			System.out.println("8. Clean the Shelter Litter Box.");
 			System.out.println("9. Quit");
 
 			String optionEntered = input.nextLine();
-			// OPTION 1
 			if (optionEntered.equals("1")) {
 				pets.feedAll();
 				System.out.println("You fed all the Dog's & Cat's in the Shelter food.\n");
 
-				// OPTION 2
 			} else if (optionEntered.equals("2")) {
 				pets.waterAll();
 				System.out.println("You gave all the Dog's & Cat's in the Shelter water.\n");
 
-				// OPTION 3
 			} else if (optionEntered.equals("3")) {
 				pets.oilAll();
 				System.out.println("The Robo Pets looked a bit sluggish.");
 				System.out.println("Thanks for the assist on helping them stay well lubricated.\n");
 
-				// OPTION 4
 			} else if (optionEntered.equals("4")) {
 				System.out.println("\nWhich Shelter Pet would you like to play with today? \n");
 				System.out.println("Just a reminder: ");
 				System.out.println("Playing with Robot Dogs decrease their Oil and Battery Levels. \n");
 				System.out.println(pets.option5Display());
 				String petName = input.nextLine();
-
 				pets.play(petName);
 				System.out.println("You took " + petName + " for a walk to the field to play.\n");
 
-				// OPTION 5
 			} else if (optionEntered.equals("5")) {
 				System.out.println("You've chosen to adopt a pet.");
 				System.out.println("Which pet would you like to adopt?\n");
@@ -125,13 +119,11 @@ public class VirtualPetShelterApp {
 					System.out.println("Congrats on adopting your new Shelter baby: \n" + petName + "!");
 				}
 
-				// Option 6
 			} else if (optionEntered.equals("6")) {
 				System.out.println("What type of pet are your surrendering?\n");
 				System.out.println("Dog? Cat? Robot Dog?");
 				String petDecision = input.nextLine();
 
-				// DOG Choice
 				if (petDecision.equalsIgnoreCase("Dog")) {
 					System.out.println("Enter the name of the Dog being surrendered: ");
 					String newPetName = input.nextLine();
@@ -143,7 +135,6 @@ public class VirtualPetShelterApp {
 					System.out.println("Your Dog will sure miss you.");
 					System.out.println("Thanks admitting your Dog instead of discarding your Dog elsewhere...\n");
 
-					// CAT Choice
 				} else if (petDecision.equalsIgnoreCase("Cat")) {
 					System.out.println("Enter the name of the Cat being surrendered: ");
 					String newPetName = input.nextLine();
@@ -155,7 +146,6 @@ public class VirtualPetShelterApp {
 					System.out.println("Your Cat will sure miss you.");
 					System.out.println("Thanks admitting your pet instead of discarding your Cat elsewhere...\n");
 
-					// ROBOT DOG Choice
 				} else if (petDecision.equalsIgnoreCase("Robot Dog")) {
 					System.out.println("Enter the name of the Robot Dog that you are surrendering.");
 					String newPetName = input.nextLine();
@@ -166,9 +156,8 @@ public class VirtualPetShelterApp {
 					pets.add(new RobotDog(newPetName, newPetDescription, 50, 50, 50));
 					System.out.println("Your Robot Pet will sure miss you.");
 					System.out.println("Thanks admitting your pet instead of discarding your Robot Pet elsewhere...\n");
-				} // End of Option 6 If Else Statment's
+				}
 
-				// OPTION 7
 			} else if (optionEntered.equals("7")) {
 				System.out.println("Would you like to clean the Dog Kennels?");
 				System.out.println("Yes or No");
@@ -178,10 +167,9 @@ public class VirtualPetShelterApp {
 					System.out.println("Thanks for cleaning the Kennels!");
 				} else if (newDecision.equalsIgnoreCase("No")) {
 					System.out.println("Are you sure?");
-					System.out.println("Some of the Kennels look like they need it.");
+					System.out.println("Some of the Kennels look like they need it.\n");
 				}
 
-				// OPTION 8
 			} else if (optionEntered.equals("8")) {
 				System.out.println("Would you like to clean the Shelter Litter Box now?");
 				System.out.println("Yes or No");
@@ -195,7 +183,6 @@ public class VirtualPetShelterApp {
 					System.out.println("It seems to be getting full...\n");
 				}
 
-				// OPTION 9
 			} else if (optionEntered.equals("9")) {
 				System.out.println("Are you sure you wish to quit the game?");
 				System.out.println("Enter Yes or No");
