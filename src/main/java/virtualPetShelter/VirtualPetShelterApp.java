@@ -103,6 +103,7 @@ public class VirtualPetShelterApp {
 				System.out.println("Taking Robot Dogs on a walk will decrease their Oil and Battery Levels. \n");
 				System.out.println(pets.option5Display());
 				String petName = input.nextLine();
+				petName = petName.substring(0, 1).toUpperCase() + petName.substring(1).toLowerCase();
 				pets.play(petName);
 				System.out.println("You took " + petName + " for a walk to the field to play.\n");
 
