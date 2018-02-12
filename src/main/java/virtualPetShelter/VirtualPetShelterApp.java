@@ -9,20 +9,20 @@ public class VirtualPetShelterApp {
 
 		VirtualPetShelter pets = new VirtualPetShelter();
 
-		Dog dog1 = new Dog("Hold", "Aged and fragile.", 40, 50, 60, 40, 60);
-		Dog dog2 = new Dog("Akita", "Wolf Hybrid, friendly,protective...", 50, 40, 50, 50, 50);
-		Dog dog3 = new Dog("Blue", "Family oriented and kid friendly.", 60, 60, 60, 60, 80);
-		Dog dog4 = new Dog("Ringo", "Dog of the Vikings. Studier than a Wolf, yet gentle.", 70, 80, 80, 60, 50);
+		Dog dog1 = new Dog("Hold", "11yr old Dog.", 40, 50, 60, 40, 60);
+		Dog dog2 = new Dog("Akita", "6yr old Dog.", 50, 40, 50, 50, 50);
+		Dog dog3 = new Dog("Blue", "2yr old Dog.", 60, 60, 60, 60, 80);
+		Dog dog4 = new Dog("Ringo", "Just an old Dog.", 70, 80, 80, 60, 50);
 
-		Cat cat1 = new Cat("Tara", "Young and Restless.", 50, 40, 50, 70, 40);
-		Cat cat2 = new Cat("Kitty", "Kitten found in a box under a porch.", 50, 40, 50, 70, 30);
-		Cat cat3 = new Cat("Snowbal", "Kitten found in a box under a porch.", 50, 40, 50, 60, 70);
-		Cat cat4 = new Cat("Yoohoo", "Skiddish and ungrateful.", 50, 40, 50, 80, 40);
+		Cat cat1 = new Cat("Tara", "A Cat with identity issues.", 50, 40, 50, 70, 40);
+		Cat cat2 = new Cat("Kitty", "An Alley Cat.", 50, 40, 50, 70, 30);
+		Cat cat3 = new Cat("Snowbal", "A pink hair Cat.", 50, 40, 50, 60, 70);
+		Cat cat4 = new Cat("Yoohoo", "Just an old Cat.", 50, 40, 50, 80, 40);
 
-		RobotDog robo1 = new RobotDog("Jax", "Description for Jax.", 50, 60, 70);
-		RobotDog robo2 = new RobotDog("Little", "Description for Little.", 40, 50, 60);
-		RobotDog robo3 = new RobotDog("Slacker", "Description for Slacker.", 70, 40, 80);
-		RobotDog robo4 = new RobotDog("Metal", "Description for Metal.", 50, 60, 40);
+		RobotDog robo1 = new RobotDog("Jax", "Bee boo Beep, Robot Dog", 50, 60, 70);
+		RobotDog robo2 = new RobotDog("Little", "Robot Dog that needs oil.", 40, 50, 60);
+		RobotDog robo3 = new RobotDog("Slacker", "Hi Tech Robot Dog.", 70, 40, 80);
+		RobotDog robo4 = new RobotDog("Metal", "Made in China...", 50, 60, 40);
 
 		pets.add(dog1);
 		pets.add(dog2);
@@ -50,7 +50,14 @@ public class VirtualPetShelterApp {
 			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Waste  |Happiness");
 			System.out.println("--------|-------|-------|--------|-------|---------");
 			System.out.println(pets.dogStatus());
-			System.out.println("Need to do something about the dog cages...\n");
+			for (VirtualPet pet : pets.pets()) {
+				if (pet instanceof Dog) {
+					if (((Dog) pet).getFilthyDogKennel() >= 75) {
+						System.out.println("\n" + pet.getName() + " needs his Kennel cleaned out.");
+						System.out.println("Need to do something about the dog cages...\n");
+					}
+				}
+			}
 
 			System.out.println("\n\t\t    **CATS**\n");
 			System.out.println("Name\t|Hunger\t|Thirst\t|Boredom |Happiness");
