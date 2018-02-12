@@ -174,7 +174,7 @@ public class VirtualPetShelterApp {
 				System.out.println("Yes or No");
 				String newDecision = input.nextLine();
 				if (newDecision.equalsIgnoreCase("Yes")) {
-					// INSERT DOG KENNEL CLEAN UP
+					pets.cleanDogKennels();
 					System.out.println("Thanks for cleaning the Kennels!");
 				} else if (newDecision.equalsIgnoreCase("No")) {
 					System.out.println("Are you sure?");
