@@ -62,11 +62,14 @@ public class VirtualPet implements Happiness {
 		this.hunger += 5;
 		this.water -= 3;
 		this.waste += 1;
+		this.happiness += 3;
 	}
 
 	public void waterPet() {
 		this.water += 6;
 		this.waste += 1;
+		this.happiness += 3;
+
 	}
 
 	public void playPet() {
@@ -100,6 +103,8 @@ public class VirtualPet implements Happiness {
 	public void oilPet() {
 		this.oil += 10;
 		this.batteryLevel += 10;
+		this.happiness += 3;
+
 	}
 
 	public int getFilthyDogKennel() {
@@ -107,7 +112,7 @@ public class VirtualPet implements Happiness {
 	}
 
 	public void cleanKennel() {
-		this.boredom += 5;
+		this.boredom -= 5;
 		this.happiness += 5;
 		this.waste = 0;
 	}
