@@ -98,9 +98,9 @@ public class VirtualPetShelterApp {
 				System.out.println("Thanks for the assist on helping them stay well lubricated.\n");
 
 			} else if (optionEntered.equals("4")) {
-				System.out.println("\nWhich Shelter Pet would you like to play with today? \n");
+				System.out.println("\nWhich Shelter Pet would you like to take on a walk today? \n");
 				System.out.println("Just a reminder: ");
-				System.out.println("Playing with Robot Dogs decrease their Oil and Battery Levels. \n");
+				System.out.println("Taking Robot Dogs on a walk will decrease their Oil and Battery Levels. \n");
 				System.out.println(pets.option5Display());
 				String petName = input.nextLine();
 				pets.play(petName);
